@@ -31,7 +31,7 @@
 		--peach: #f9c4aa;
 		--violet: #8e79b6;
 
-		--general-px: calc(1.823vw + 10px);
+		--general-px: 5rem;
 
 		/* vw = px value / 19.2 */
 		/* rem = px value / 16 */
@@ -52,21 +52,21 @@
 		font-family: 'PPSupplyMono', monospace;
 		font-style: normal;
 
-		letter-spacing: -.02em;
-        word-spacing: -.3em;
+		letter-spacing: -0.02em;
+		word-spacing: -0.3em;
 
 		color: var(--black);
 	}
 
-    :global(p){
-        line-height: 1.5em;
-        font-weight: 300;
-    }
+	:global(p) {
+		line-height: 1.5em;
+		font-weight: 300;
+	}
 
-    :global(h1, h2, h3, h4, h5, h6){
-text-transform: uppercase;
-font-weight: 400;
-    }
+	:global(h1, h2, h3, h4, h5, h6) {
+		text-transform: uppercase;
+		font-weight: 400;
+	}
 
 	:global(a) {
 		text-decoration: none;

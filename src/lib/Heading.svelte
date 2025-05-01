@@ -9,5 +9,6 @@
 		background-color: var(--shadow);
 		padding: 3rem 4rem;
 		margin: 0;
+		margin-left: var(--general-px);
 	}
 </style>
