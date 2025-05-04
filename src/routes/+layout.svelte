@@ -81,4 +81,8 @@
 		margin: 0;
         background-color: var(--black);
 	}
+
+	:global(h1){
+		font-size: var(--fs-32);
+	}
 </style>

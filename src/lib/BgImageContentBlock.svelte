@@ -8,13 +8,13 @@
 
 <style>
 	div {
-position: relative;
+		position: relative;
 		height: 100vh;
 		width: 100vw;
 		padding: 0;
 		margin: 0;
 
-        background-attachment: fixed;
+		background-attachment: fixed;
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;

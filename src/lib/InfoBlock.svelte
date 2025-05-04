@@ -67,10 +67,12 @@
 		.wrapper {
 			flex-direction: column;
 			gap: 1rem;
+
+			padding: 1rem;
+			width: calc(100% - 2rem);
 		}
 
 		.texts-container {
-			width: calc(100% - 5rem);
 			justify-content: space-between;
 		}
 	}

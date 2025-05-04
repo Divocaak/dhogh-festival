@@ -54,6 +54,7 @@
 		</div>
 	</div>
 </BgImageContentBlock>
+
 <ContentBlock backgroundColor="var(--blue)">
 	<Heading heading="festival" />
 	<div class="festival-content-wrapper">
@@ -65,6 +66,7 @@
 		<div class="img-container"></div>
 	</div>
 </ContentBlock>
+
 <BgImageContentBlock imagePath="imgs/values.jpg">
 	<div class="values">
 		<h1>{langs[$lang].values.label}</h1>
@@ -74,6 +76,7 @@
 		{/each}
 	</div>
 </BgImageContentBlock>
+
 <ContentBlock backgroundColor="var(--green)">
 	<Heading heading={langs[$lang].programme.label} />
 	<div class="program-main-wrapper">
@@ -119,6 +122,7 @@
 		<ButtonLink href={eventLink} label="event" />
 	</div>
 </ContentBlock>
+
 <ContentBlock backgroundColor="var(--violet)">
 	<Heading heading={langs[$lang].tickets.label} />
 	<div class="tickets-wrapper">
@@ -138,23 +142,24 @@
 	</div>
 	<p class="tickets-warning">lístky platné pouze nákupem v síti goout</p>
 </ContentBlock>
-<BgImageContentBlock imagePath="imgs/footer.jpg">
+
+<!-- <BgImageContentBlock imagePath="imgs/footer.jpg">
 	<div class="footer">
 		<ButtonLink label="facebook" href="https://www.facebook.com/DHOGHTEAM" marginAuto={false} />
 		<ButtonLink label="instagram" href="https://www.instagram.com/dhoghteam/" marginAuto={false} />
 		<ButtonLink label="dhoghteam@gmail.com" href="mailto:dhoghteam@gmail.com" marginAuto={false} />
 	</div>
-</BgImageContentBlock>
+</BgImageContentBlock> -->
 
 <style>
 	.landing {
 		position: absolute;
-		width: 100%;
+		width: 100vw;
 		top: 40%;
 	}
 
 	.landing .content-wrapper {
-		width: max-content;
+		width: min-content;
 
 		margin: auto;
 
@@ -163,7 +168,7 @@
 		align-items: center;
 	}
 
-	.landing h1 {
+	.landing .content-wrapper h1 {
 		background-color: var(--peach);
 		width: max-content;
 		padding: 0.3rem 1.5rem;
@@ -288,5 +293,76 @@
 		justify-content: space-evenly;
 		margin: auto;
 		bottom: 10%;
+	}
+
+	/* Small devices (phones, ≥576px) */
+	@media (max-width: 767.98px) {
+		.landing {
+			top: 50%;
+		}
+
+		.landing .content-wrapper h1 {
+			font-size: var(--fs-24);
+		}
+
+		.festival-content-wrapper {
+			flex-direction: column;
+		}
+
+		.festival-content-wrapper .texts {
+			padding: calc(0.5 * var(--general-px));
+		}
+
+		.values {
+			margin: 0 calc(0.5 * var(--general-px));
+		}
+
+		.values h1 {
+			font-size: var(--fs-20);
+		}
+
+		.values h2 {
+			font-size: var(--fs-18);
+		}
+
+		.values p {
+			font-size: var(--fs-12);
+		}
+
+		.program-main-wrapper {
+			grid-template-columns: repeat(1, 1fr);
+			padding: calc(0.5 * var(--general-px));
+		}
+
+		.program-smaller-wrapper {
+			padding: calc(0.5 * var(--general-px));
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.program-smaller-wrapper:last-of-type .wrapper h2:first-of-type {
+			padding-bottom: 0;
+		}
+
+		.tickets-wrapper {
+			padding: calc(0.5 * var(--general-px));
+			grid-template-columns: repeat(1, 1fr);
+			/* grid-template-rows: repeat(5, auto); */
+		}
+	}
+
+	/* Medium devices (tablets, ≥768px) */
+	@media (min-width: 768px) and (max-width: 991.98px) {
+		/* Styles for tablets */
+	}
+
+	/* Large devices (desktops, ≥992px) */
+	@media (min-width: 992px) and (max-width: 1199.98px) {
+		/* Styles for small desktops */
+	}
+
+	/* Extra large devices (large desktops, ≥1200px) */
+	@media (min-width: 1200px) {
+		/* Styles for large screens */
 	}
 </style>
