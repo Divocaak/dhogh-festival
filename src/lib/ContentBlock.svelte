@@ -2,7 +2,7 @@
 	export let backgroundColor = 'var(--black)';
 </script>
 
-<div style="--bg-color: {backgroundColor}">
+<div style="--bg-color: {backgroundColor};">
 	<slot></slot>
 </div>
 
@@ -13,7 +13,7 @@
 
 	div {
 		position: relative;
-		min-height: 100vh;
+		z-index: 10;
 		width: 100vw;
 		padding: 0;
 		margin: 0;

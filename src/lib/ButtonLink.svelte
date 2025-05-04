@@ -5,9 +5,10 @@
 	export let bgColor = 'var(--black)';
 	export let txtColor = 'var(--shadow)';
     export let marginAuto = true;
+	export let smallerPaddings = false;
 </script>
 
-<a style="--background-color: {bgColor}; --text-color: {txtColor};" class:margin-auto={marginAuto} {href} {target}>{label}</a>
+<a style="--background-color: {bgColor}; --text-color: {txtColor};" class:margin-auto={marginAuto} class:smaller-paddings={smallerPaddings} {href} {target}>{label}</a>
 
 <style>
 	:root {
@@ -36,4 +37,8 @@
     .margin-auto{
         margin: auto;
     }
+
+	.smaller-paddings{
+		padding: .75rem 1.25rem;
+	}
 </style>

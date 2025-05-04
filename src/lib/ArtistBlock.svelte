@@ -4,27 +4,34 @@
 </script>
 
 <div class="container">
-	<img src="{imgPath}" alt="" />
+	<div class="image" style="background-image: url('/imgs/artists/{imgPath}');"></div>
 	<h1>{name}</h1>
 </div>
 
 <style>
 	.container {
-		position: relative;
+		display: flex;
+		flex-direction: column;
 	}
 
-	.container img {
-		max-width: 100%;
-		height: auto;
-		position: relative;
+	.container .image {
+		aspect-ratio: 1 / 1;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 
 	.container h1 {
-		position: relative;
-		bottom: 0;
-		background-color: var(--shadow);
-		margin: 0;
+		display: flex;
+		align-items: flex-end; 
+		justify-content: center;
+
+		height: 100%;
+		
 		padding-top: 2rem;
+		margin: 0;
+
 		text-align: center;
+		background-color: var(--shadow);
 	}
 </style>

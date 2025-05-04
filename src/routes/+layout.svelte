@@ -3,21 +3,21 @@
 <style>
 	@font-face {
 		font-family: 'InterItalic';
-		src: url('/Inter/Inter-Italic-VariableFont_opsz,wght.ttf');
+		src: url('fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf');
 		font-weight: 100 1000;
 		font-style: italic;
 	}
 
 	@font-face {
 		font-family: 'Inter';
-		src: url('/Inter/Inter-VariableFont_opsz,wght.ttf');
+		src: url('fonts/Inter/Inter-VariableFont_opsz,wght.ttf');
 		font-weight: 100 1000;
 		font-style: normal;
 	}
 
 	@font-face {
 		font-family: 'PPSupplyMono';
-		src: url('/PPSupplyMono-Variable.ttf');
+		src: url('fonts/PPSupplyMono-Variable.ttf');
 		font-weight: 100 1000;
 		font-style: normal;
 	}

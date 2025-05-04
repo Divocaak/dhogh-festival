@@ -8,10 +8,17 @@
 
 	import { lang } from '$lib/LangStore.js';
 	import langs from '$lib/localization.json';
+	import BgImageContentBlock from '$lib/BgImageContentBlock.svelte';
 
 	const eventLink = 'https://fb.me/e/gImSXNvsV';
 
-	const ticketImgs = ['/tst.jpg', '/tst.jpg', '/tst.jpg', '/tst.jpg', '/tst.jpg'];
+	const ticketImgs = [
+		'trueraver.jpg',
+		'raver.jpg',
+		'artists/humiks.jpg',
+		'artists/alex.jpg',
+		'artists/veitb.jpg'
+	];
 	const ticketLinks = [
 		['https://fb.me/e/gImSXNvsV', 'https://fb.me/e/gImSXNvsV'],
 		['https://fb.me/e/gImSXNvsV', 'https://fb.me/e/gImSXNvsV'],
@@ -21,7 +28,7 @@
 	];
 </script>
 
-<ContentBlock>
+<BgImageContentBlock imagePath="imgs/artists/veitb.jpg">
 	<InfoBlock />
 	<div class="landing">
 		<div class="content-wrapper">
@@ -46,7 +53,7 @@
 			</div>
 		</div>
 	</div>
-</ContentBlock>
+</BgImageContentBlock>
 <ContentBlock backgroundColor="var(--blue)">
 	<Heading heading="festival" />
 	<div class="festival-content-wrapper">
@@ -55,35 +62,42 @@
 				<p>{text}</p>
 			{/each}
 		</div>
-		<div class="img-container">
-			<img src="/tst.jpg" alt="" />
-		</div>
+		<div class="img-container"></div>
 	</div>
 </ContentBlock>
+<BgImageContentBlock imagePath="imgs/values.jpg">
+	<div class="values">
+		<h1>{langs[$lang].values.label}</h1>
+		{#each langs[$lang].values.values as value}
+			<h2>{value.label}</h2>
+			<p>{value.desc}</p>
+		{/each}
+	</div>
+</BgImageContentBlock>
 <ContentBlock backgroundColor="var(--green)">
 	<Heading heading={langs[$lang].programme.label} />
 	<div class="program-main-wrapper">
-		<ArtistBlock name="Tigerhead (DE)" />
-		<ArtistBlock name="Alex Wilcox (US)" />
-		<ArtistBlock />
-		<ArtistBlock />
-		<ArtistBlock />
-		<ArtistBlock />
-		<ArtistBlock />
-		<ArtistBlock />
+		<ArtistBlock name="Tigerhead (DE)" imgPath="veitb.jpg" />
+		<ArtistBlock name="Alex Wilcox (US)" imgPath="alex.jpg" />
+		<ArtistBlock name="Veit B" imgPath="veitb.jpg" />
+		<ArtistBlock name="Mista Humiks" imgPath="humiks.jpg" />
+		<ArtistBlock name="Alex Wilcox (US)" imgPath="alex.jpg" />
+		<ArtistBlock name="Tigerhead (DE)" imgPath="veitb.jpg" />
+		<ArtistBlock name="Mista Humiks" imgPath="humiks.jpg" />
+		<ArtistBlock name="Veit B" imgPath="veitb.jpg" />
 	</div>
 	<div class="program-smaller-wrapper">
 		<div class="wrapper">
-			<h2>1. artist name</h2>
-			<h2>2. artist name</h2>
-			<h2>3. artist name</h2>
-			<h2>4. artist name</h2>
+			<h2>tigerhead (de)</h2>
+			<h2>alex wilcox (us)</h2>
+			<h2>veit b</h2>
+			<h2>mista humiks</h2>
 		</div>
 		<div class="wrapper">
-			<h2>5. artist name</h2>
-			<h2>6. artist name</h2>
-			<h2>7. artist name</h2>
-			<h2>8. artist name</h2>
+			<h2>alex wilcox (us)</h2>
+			<h2>tigerhead (de)</h2>
+			<h2>mista humiks</h2>
+			<h2>veit b</h2>
 		</div>
 	</div>
 	<div class="program-smaller-wrapper">
@@ -124,13 +138,13 @@
 	</div>
 	<p class="tickets-warning">lístky platné pouze nákupem v síti goout</p>
 </ContentBlock>
-<ContentBlock>
+<BgImageContentBlock imagePath="imgs/footer.jpg">
 	<div class="footer">
 		<ButtonLink label="facebook" href="https://www.facebook.com/DHOGHTEAM" marginAuto={false} />
 		<ButtonLink label="instagram" href="https://www.instagram.com/dhoghteam/" marginAuto={false} />
 		<ButtonLink label="dhoghteam@gmail.com" href="mailto:dhoghteam@gmail.com" marginAuto={false} />
 	</div>
-</ContentBlock>
+</BgImageContentBlock>
 
 <style>
 	.landing {
@@ -175,20 +189,41 @@
 		flex-direction: column;
 		justify-content: center;
 		padding-left: calc(2 * var(--general-px));
+		padding-right: var(--general-px);
 	}
 
 	.festival-content-wrapper .img-container {
 		flex: 2;
 		aspect-ratio: 1 / 1;
-		background-image: url('tst.jpg');
+		background-image: url('/imgs/values.jpg');
 		background-size: cover;
 		background-position: center;
 	}
 
-	img {
-		position: relative;
+	.values {
+		margin: 0 calc(2 * var(--general-px));
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		align-content: space-around;
 		height: 100%;
-		width: 100%;
+	}
+
+	.values h1,
+	.values h2,
+	.values p {
+		color: var(--shadow);
+		background-color: var(--red);
+		padding: 0.5rem;
+	}
+
+	.values p {
+		margin: 0;
+	}
+
+	.values h2 {
+		margin-bottom: 0;
 	}
 
 	.program-main-wrapper {
@@ -212,7 +247,9 @@
 		width: 100%;
 	}
 
-	.program-smaller-wrapper .wrapper h2 {
+	.program-smaller-wrapper .wrapper h2,
+	.program-smaller-wrapper .wrapper h3,
+	.program-smaller-wrapper .wrapper p {
 		color: var(--shadow);
 	}
 
@@ -230,7 +267,7 @@
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(3, auto);
 
-		gap: 2rem;
+		gap: 5rem 2rem;
 		padding: calc(1.5 * var(--general-px));
 	}
 
@@ -240,6 +277,7 @@
 		width: 100%;
 		text-align: center;
 		margin: 0;
+		padding-bottom: 1rem;
 	}
 
 	.footer {
