@@ -1,4 +1,7 @@
 <script>
+	import Button from './Button.svelte';
+	import { lang } from '$lib/LangStore.js';
+
 	export let txtColor = 'var(--shadow)';
 </script>
 
@@ -24,6 +27,7 @@
 		<p>electronic<br />music<br />festival</p>
 		<p>žižkárna<br />18-20-06<br />2026</p>
 	</div>
+	<Button label="cz/en" onclick={() => lang.set($lang === "cs" ? 'en' : "cs")} />
 </div>
 
 <style>
@@ -44,7 +48,7 @@
 	p {
 		text-transform: uppercase;
 		word-break: break-all;
-        color: var(--text-color);
+		color: var(--text-color);
 	}
 
 	.texts-container {

@@ -1,0 +1,229 @@
+{
+    "cs": {
+        "landing": {
+            "texts": [
+                "3 dny elektronické hudby",
+                "15 interpretů",
+                "+ workshopy a diskuze"
+            ]
+        },
+        "festival": [
+            "Festival propojuje taneční hudbu, umění, filozofii a komunitního ducha undergroundové scény. Poskytuje nejen kulturní zážitek, ale i prostor pro hlubší reflexi nad významem elektronické hudby a jejího vlivu na městský noční život.",
+            "Cílem festivalu je také přiblížit elektronickou hudbu a s ní spojenou kulturu širší veřejnosti a mladé generaci. Rozšířit komunitu a podnítit zástupce mladé generace k tvorbě hudby nebo DJingu, a tak vytvořit dlouhodobou kontinuitu."
+        ],
+        "values": {
+            "label": "naše hodnoty",
+            "values": [
+                {
+                    "label": "Kreativní scénografie",
+                    "desc": "Pro každou club night se snažíme vymyslet nový scénografický koncept, tak aby návštěvník zažil nové možnosti prostoru. SIlným prvkem je také DIY a Re-use přístup, kdy většina rekvizit vzniká znovuvyužitím věcí s jiným původním účelem."
+                },
+                {
+                    "label": "Bezpečná atmosféra",
+                    "desc": "Náš prostor je více než jen místem hudby - je to útočiště bezpečí, respektu a přijetí. Každý, kdo sem vstoupí, je součástí komunity, kde nezáleží na původu, identitě nebo zkušenostech."
+                },
+                {
+                    "label": "Komunita a sdílení",
+                    "desc": "Party nejsou jen o hudbě, ale i o lidech. Kolektiv vytváří prostor pro propojení, vzájemnou inspiraci a podporu mezi umělci, organizátory i návštěvníky."
+                }
+            ]
+        },
+        "programme": {
+            "label": "program",
+            "workshops": {
+                "label": "workshopy",
+                "texts": [
+                    "Veit B: Základy DJingu",
+                    "Prague Synth Library: xxx"
+                ]
+            },
+            "discussions": {
+                "label": "diskuze",
+                "texts": [
+                    {
+                        "label": "Kultura a její přínos pro město:",
+                        "desc": "Společně se zástupci odboru kultury, týmu Evropského hlavního města kultury a místním architektem budeme debatovat o přínosech a pozitivních externalitách mainstreamové i alternativní kultury pro města."
+                    },
+                    {
+                        "label": "Analogová hudba a její místo na dnešní scéně",
+                        "desc": "Společně se zástupci Prague Synth Library, lokálním výrobcem syntetizátorů a hudebníky využívajícími analogovou hudbu v jejich tvorbě probereme její přínosy i úskalí. Jaká hlavní pozitiva přináší a kde jsou její limity."
+                    },
+                    {
+                        "label": "Alternativní elektronická scéna v menších regionech vs velká města",
+                        "desc": "Společně s vystupujícími umělci, pořadatelem rave parties v Praze a promotéry budeme diskutovat o rozdílech alternativní elektronické scény. Jaká je její pozice v jednotlivých sídlech a může vůbec existovat stabilní scéna v menších městech."
+                    }
+                ]
+            }
+        },
+        "tickets": {
+            "label": "tickets",
+            "tickets": [
+                {
+                    "label": "true raver",
+                    "desc": "full festival pass",
+                    "texts": [
+                        "Vstupenka na všechny dny festivalu (18. - 20. 6), diskuze a následnou afterparty s omezenou kapacitou.",
+                        "V ceně vstupenky je také možnost zúčastnit se workshopů (Vaše účast bude potvrzena na základě dotazníku). ",
+                        "Vlastní bar",
+                        "Normální toalety"
+                    ],
+                    "price": "500,- Kč",
+                    "priceSecondWave": "600,- Kč"
+                },
+                {
+                    "label": "raver",
+                    "desc": "Pouze páteční Main Stage",
+                    "texts": [
+                        "Vstupenka na páteční program na hlavní stage, kde vystoupí oba headlineři.",
+                        "S touto vstupenkou není možné se účastnit workshopů ani diskuzí v tento den."
+                    ],
+                    "price": "300,- Kč",
+                    "priceSecondWave": "400,- Kč"
+                },
+                {
+                    "label": "synth thursday",
+                    "desc": "Pouze čtvrteční program",
+                    "texts": [
+                        "Vstupenka na čtvrteční program věnovaný analogové hudbě.",
+                        "V ceně vstupenky je diskuze a následné koncerty a DJ sety"
+                    ],
+                    "price": "200,- Kč"
+                },
+                {
+                    "label": "local wednesday",
+                    "desc": "Pouze středeční program",
+                    "texts": [
+                        "Vstupenka na středeční program věnovaný lokální scéně",
+                        "V ceně vstupenky je diskuze a DJ sety"
+                    ],
+                    "price": "100,- Kč"
+                },
+                {
+                    "label": "festival suppoerter",
+                    "desc": "supporter festival pass",
+                    "texts": [
+                        "Vstupenka na všechny dny festivalu (18. - 20. 6), diskuze a následnou afterparty s omezenou kapacitou.",
+                        "V ceně vstupenky je zaručená účast na workshopech",
+                        "Vlastní bar",
+                        "Normální toalety"
+                    ],
+                    "price": "1500,- Kč"
+                }
+            ]
+        }
+    },
+    "en": {
+        "landing": {
+            "texts": [
+                "3 days of electronic music",
+                "15 artists",
+                "+ workshops and discussions"
+            ]
+        },
+        "festival": [
+            "Our festival weaves together dance music, art, philosophy, and the collective energy of the underground. It's more than a night out—it's a space for reflection, connection, and cultural discovery.",
+            "We celebrate electronic music not only as sound but as a force that shapes urban nightlife and community. Through performances, discussions, and shared experiences, we open the scene to new audiences and the next generation of creators.",
+            "Whether you're here to dance, learn, or get inspired to create, this is where the journey begins. Join us—and be part of something that echoes beyond the dancefloor."
+        ],
+        "values": {
+            "label": "our values",
+            "values": [
+                {
+                    "label": "Creative Scenography",
+                    "desc": "Each club night is shaped by a unique scenographic concept, designed to let visitors experience the space in new and unexpected ways. A strong part of our approach is DIY and re-use—most of our props are made by repurposing objects that once served entirely different functions."
+                },
+                {
+                    "label": "safe space",
+                    "desc": "Our space is more than just a place for music—it's a refuge of safety, respect, and acceptance. Everyone who walks through our doors becomes part of a community where background, identity, or experience doesn't matter."
+                },
+                {
+                    "label": "Community and Sharing",
+                    "desc": "A party is never just about the music—it's about the people. The collective creates a space for connection, mutual inspiration, and support between artists, organizers, and visitors alike."
+                }
+            ]
+        },
+        "programme": {
+            "label": "programme",
+            "workshops": {
+                "label": "workshops",
+                "texts": [
+                    "Veit B: Basics of DJing",
+                    "Prague Synth Library: xxx"
+                ]
+            },
+            "discussions": {
+                "label": "Discussions (will be held in Czech language)",
+                "texts": [
+                    {
+                        "label": "Culture and Its Value to the City",
+                        "desc": "Together with representatives from the Department of Culture, the European Capital of Culture team, and a local architect, we'll explore the benefits and positive externalities that both mainstream and alternative culture bring to urban environments."
+                    },
+                    {
+                        "label": "Analog Music and Its Role in Today's Scene",
+                        "desc": "In collaboration with members of the Prague Synth Library, a local synthesizer maker, and musicians who incorporate analog sound into their work, we'll discuss the strengths and challenges of analog music. What are its greatest advantages—and where do its limitations lie?"
+                    },
+                    {
+                        "label": "The Alternative Electronic Scene: Small Regions vs. Big Cities",
+                        "desc": "Joined by performing artists, a Prague-based rave organizer, and local promoters, we'll dive into the contrasts between alternative electronic scenes in small towns and major cities. What is the scene's standing in different locations—and can a stable underground community truly thrive in smaller regions?"
+                    }
+                ]
+            }
+        },
+        "tickets": {
+            "label": "tickets",
+            "tickets": [
+                {
+                    "label": "true raver",
+                    "desc": "full festival pass",
+                    "texts": [
+                        "Includes entry to all festival days, panel discussions, and an exclusive-capacity afterparty.",
+                        "Your ticket also grants access to workshops—participation will be confirmed via a short registration form.",
+                        "Private bar",
+                        "Real clean toilets"
+                    ],
+                    "price": "500,- Kč",
+                    "priceSecondWave": "600,- Kč"
+                },
+                {
+                    "label": "raver",
+                    "desc": "Friday Main Stage only",
+                    "texts": [
+                        "Grants access to Friday's main stage program featuring both headliners.",
+                        "This ticket does not include access to workshops or panel discussions on that day."
+                    ],
+                    "price": "300,- Kč",
+                    "priceSecondWave": "400,- Kč"
+                },
+                {
+                    "label": "synth thursday",
+                    "desc": "Thursday only",
+                    "texts": [
+                        "Includes access to the full Thursday program dedicated to analog music.",
+                        "The ticket covers entry to the discussion panel, live performances, and DJ sets."
+                    ],
+                    "price": "200,- Kč"
+                },
+                {
+                    "label": "local wednesday",
+                    "desc": "Wednesday only",
+                    "texts": [
+                        "Grants access to the Wednesday program dedicated to the local electronic music scene.",
+                        "Includes entry to the discussion panel and DJ sets."
+                    ],
+                    "price": "100,- Kč"
+                },
+                {
+                    "label": "festival suppoerter",
+                    "desc": "supporter festival pass",
+                    "texts": [
+                        "Includes access to all festival days, panel discussions, and an exclusive-capacity afterparty.",
+                        "The ticket guarantees participation in workshops",
+                        "Private bar",
+                        "Real clean toilets"
+                    ],
+                    "price": "1500,- Kč"
+                }
+            ]
+        }
+    }
+}

@@ -3,21 +3,47 @@
 	import ContentBlock from '$lib/ContentBlock.svelte';
 	import Heading from '$lib/Heading.svelte';
 	import ArtistBlock from '$lib/ArtistBlock.svelte';
-	import Button from '$lib/Button.svelte';
+	import ButtonLink from '$lib/ButtonLink.svelte';
 	import TicketPanel from '$lib/TicketPanel.svelte';
 
+	import { lang } from '$lib/LangStore.js';
+	import langs from '$lib/localization.json';
+
 	const eventLink = 'https://fb.me/e/gImSXNvsV';
-	const trueRaverTicketLink = 'https://fb.me/e/gImSXNvsV';
-	const raverTicketLink = 'https://fb.me/e/gImSXNvsV';
+
+	const ticketImgs = ['/tst.jpg', '/tst.jpg', '/tst.jpg', '/tst.jpg', '/tst.jpg'];
+	const ticketLinks = [
+		['https://fb.me/e/gImSXNvsV', 'https://fb.me/e/gImSXNvsV'],
+		['https://fb.me/e/gImSXNvsV', 'https://fb.me/e/gImSXNvsV'],
+		'https://fb.me/e/gImSXNvsV',
+		'https://fb.me/e/gImSXNvsV',
+		'https://fb.me/e/gImSXNvsV'
+	];
 </script>
 
 <ContentBlock>
 	<InfoBlock />
 	<div class="landing">
-		<div>
-			<h1>3 dny elektronické hudby</h1>
-			<h1>15 interpretů</h1>
-			<h1>+ workshopy a diskuze</h1>
+		<div class="content-wrapper">
+			{#each langs[$lang].landing.texts as text}
+				<h1>{text}</h1>
+			{/each}
+			<div class="buttons-wrapper">
+				<ButtonLink
+					link={eventLink}
+					label="event"
+					bgColor="var(--shadow)"
+					txtColor="var(--black)"
+					marginAuto={false}
+				/>
+				<ButtonLink
+					link=""
+					label="tickets"
+					bgColor="var(--shadow)"
+					txtColor="var(--black)"
+					marginAuto={false}
+				/>
+			</div>
 		</div>
 	</div>
 </ContentBlock>
@@ -25,16 +51,9 @@
 	<Heading heading="festival" />
 	<div class="festival-content-wrapper">
 		<div class="texts">
-			<p>
-				Festival propojuje taneční hudbu, umění, filozofii a komunitního ducha undergroundové scény.
-				Poskytuje nejen kulturní zážitek, ale i prostor pro hlubší reflexi nad významem elektronické
-				hudby a jejího vlivu na městský noční život.
-			</p>
-			<p>
-				Festival propojuje taneční hudbu, umění, filozofii a komunitního ducha undergroundové scény.
-				Poskytuje nejen kulturní zážitek, ale i prostor pro hlubší reflexi nad významem elektronické
-				hudby a jejího vlivu na městský noční život.
-			</p>
+			{#each langs[$lang].festival as text}
+				<p>{text}</p>
+			{/each}
 		</div>
 		<div class="img-container">
 			<img src="/tst.jpg" alt="" />
@@ -42,10 +61,10 @@
 	</div>
 </ContentBlock>
 <ContentBlock backgroundColor="var(--green)">
-	<Heading heading="program" />
+	<Heading heading={langs[$lang].programme.label} />
 	<div class="program-main-wrapper">
-		<ArtistBlock />
-		<ArtistBlock />
+		<ArtistBlock name="Tigerhead (DE)" />
+		<ArtistBlock name="Alex Wilcox (US)" />
 		<ArtistBlock />
 		<ArtistBlock />
 		<ArtistBlock />
@@ -69,52 +88,58 @@
 	</div>
 	<div class="program-smaller-wrapper">
 		<div class="wrapper">
-			<h2>workshopy</h2>
-			<h2>ws name</h2>
-			<h2>ws name</h2>
+			<h2>{langs[$lang].programme.workshops.label}</h2>
+			{#each langs[$lang].programme.workshops.texts as text}
+				<h3>{text}</h3>
+			{/each}
 		</div>
 		<div class="wrapper">
-			<h2>diskuze</h2>
-			<h2>label</h2>
-			<h2>label</h2>
-			<h2>label</h2>
+			<h2>{langs[$lang].programme.discussions.label}</h2>
+			{#each langs[$lang].programme.discussions.texts as text}
+				<h3>{text.label}</h3>
+				<p>{text.desc}</p>
+			{/each}
 		</div>
 	</div>
 	<div class="button-wrapper">
-		<Button href={eventLink} label="event" />
+		<ButtonLink href={eventLink} label="event" />
 	</div>
 </ContentBlock>
 <ContentBlock backgroundColor="var(--violet)">
-	<Heading heading="lístky" />
+	<Heading heading={langs[$lang].tickets.label} />
 	<div class="tickets-wrapper">
-		<TicketPanel
-			label="true raver"
-			desc="full festival pass"
-			descLong="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur."
-			imgPath="/tst.jpg"
-			price="450"
-			link={trueRaverTicketLink}
-		/>
-		<TicketPanel
-			label="raver"
-			desc="friday main stage only"
-			descLong="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur."
-			imgPath="/tst.jpg"
-			price="300"
-			link={raverTicketLink}
-		/>
+		{#each langs[$lang].tickets.tickets as ticket, i}
+			<TicketPanel
+				label={ticket.label}
+				desc={ticket.desc}
+				texts={ticket.texts}
+				imgPath={ticketImgs[i]}
+				price={ticket.price}
+				link={ticketLinks[i] instanceof Array ? ticketLinks[i][0] : ticketLinks[i]}
+				priceSecondWave={ticket.priceSecondWave}
+				linkSecondWave={ticketLinks[i] instanceof Array ? ticketLinks[i][1] : ticketLinks[i]}
+				twoCols={langs[$lang].tickets.tickets.length - 1 == i && i % 2 == 0}
+			/>
+		{/each}
 	</div>
-    <p class="tickets-warning">lístky platné pouze nákupem v síti goout</p>
+	<p class="tickets-warning">lístky platné pouze nákupem v síti goout</p>
+</ContentBlock>
+<ContentBlock>
+	<div class="footer">
+		<ButtonLink label="facebook" href="https://www.facebook.com/DHOGHTEAM" marginAuto={false} />
+		<ButtonLink label="instagram" href="https://www.instagram.com/dhoghteam/" marginAuto={false} />
+		<ButtonLink label="dhoghteam@gmail.com" href="mailto:dhoghteam@gmail.com" marginAuto={false} />
+	</div>
 </ContentBlock>
 
 <style>
 	.landing {
-		position: relative;
+		position: absolute;
 		width: 100%;
 		top: 40%;
 	}
 
-	.landing div {
+	.landing .content-wrapper {
 		width: max-content;
 
 		margin: auto;
@@ -131,22 +156,33 @@
 		margin: 0;
 	}
 
+	.landing .content-wrapper .buttons-wrapper {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-between;
+		padding-top: 3rem;
+	}
+
 	.festival-content-wrapper {
 		display: flex;
 		flex-direction: row;
-		align-items: center;
 	}
 
 	.festival-content-wrapper .texts {
-		background-color: red;
-		width: 60%;
-		margin: 10rem;
+		flex: 3;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-left: calc(2 * var(--general-px));
 	}
 
 	.festival-content-wrapper .img-container {
-		position: relative;
-		width: 40%;
-		height: 100%;
+		flex: 2;
+		aspect-ratio: 1 / 1;
+		background-image: url('tst.jpg');
+		background-size: cover;
+		background-position: center;
 	}
 
 	img {
@@ -190,18 +226,29 @@
 	}
 
 	.tickets-wrapper {
-		display: flex;
-		flex-direction: row;
-        justify-content: center;
-        gap: 2rem;
-        align-content: center;
-        padding: calc(1.5 * var(--general-px));
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, auto);
+
+		gap: 2rem;
+		padding: calc(1.5 * var(--general-px));
 	}
 
-    .tickets-warning{
-        text-transform: uppercase;
-        color: var(--shadow);
-        width: 100%;
-        text-align: center;
-    }
+	.tickets-warning {
+		text-transform: uppercase;
+		color: var(--shadow);
+		width: 100%;
+		text-align: center;
+		margin: 0;
+	}
+
+	.footer {
+		display: flex;
+		flex-direction: row;
+		position: absolute;
+		width: 100%;
+		justify-content: space-evenly;
+		margin: auto;
+		bottom: 10%;
+	}
 </style>

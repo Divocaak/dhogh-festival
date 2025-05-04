@@ -79,5 +79,6 @@
 
 	:global(body) {
 		margin: 0;
+        background-color: var(--black);
 	}
 </style>
