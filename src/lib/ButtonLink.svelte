@@ -4,11 +4,19 @@
 	export let target = '_blank';
 	export let bgColor = 'var(--black)';
 	export let txtColor = 'var(--shadow)';
-    export let marginAuto = true;
+	export let marginAuto = true;
 	export let smallerPaddings = false;
+	export let disabled = false;
 </script>
 
-<a style="--background-color: {bgColor}; --text-color: {txtColor};" class:margin-auto={marginAuto} class:smaller-paddings={smallerPaddings} {href} {target}>{label}</a>
+<a
+	style="--background-color: {bgColor}; --text-color: {txtColor};"
+	class:margin-auto={marginAuto}
+	class:smaller-paddings={smallerPaddings}
+	class:disabled
+	{href}
+	{target}>{label}</a
+>
 
 <style>
 	:root {
@@ -17,28 +25,40 @@
 	}
 
 	a {
-        position: relative;
-        display: block;
-        width: max-content;
+		position: relative;
+		display: block;
+		width: max-content;
 
 		text-transform: uppercase;
 		background-color: var(--background-color);
 		color: var(--text-color);
 		padding: 1.25rem 1.75rem;
 
-        transition: all .2s ease-in-out;
+		transition: all 0.2s ease-in-out;
 	}
 
-    a:hover{
-        color: var(--background-color);
-        background-color: var(--text-color);
-    }
+	a:hover {
+		color: var(--background-color);
+		background-color: var(--text-color);
+	}
 
-    .margin-auto{
-        margin: auto;
-    }
+	.margin-auto {
+		margin: auto;
+	}
 
-	.smaller-paddings{
-		padding: .75rem 1.25rem;
+	.smaller-paddings {
+		padding: 0.75rem 1.25rem;
+	}
+
+	.disabled {
+		pointer-events: none;
+		cursor: default;
+		color: var(--disabled);
+		text-decoration: line-through;
+	}
+
+	.disabled:hover {
+		color: var(--background-color);
+		background-color: var(--disabled);
 	}
 </style>

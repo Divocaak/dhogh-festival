@@ -57,6 +57,8 @@
         },
         "tickets": {
             "label": "tickets",
+            "button": "koupit",
+            "warning": "lístky platné pouze nákupem v síti goout",
             "tickets": [
                 {
                     "label": "true raver",
@@ -67,8 +69,8 @@
                         "Vlastní bar",
                         "Normální toalety"
                     ],
-                    "price": "500,- Kč",
-                    "priceSecondWave": "600,- Kč"
+                    "price": "1. VLNA: 500,- Kč",
+                    "priceSecondWave": "2. VLNA: 600,- Kč"
                 },
                 {
                     "label": "raver",
@@ -77,8 +79,8 @@
                         "Vstupenka na páteční program na hlavní stage, kde vystoupí oba headlineři.",
                         "S touto vstupenkou není možné se účastnit workshopů ani diskuzí v tento den."
                     ],
-                    "price": "300,- Kč",
-                    "priceSecondWave": "400,- Kč"
+                    "price": "1. VLNA: 300,- Kč",
+                    "priceSecondWave": "2. VLNA: 400,- Kč"
                 },
                 {
                     "label": "synth thursday",
@@ -171,6 +173,8 @@
         },
         "tickets": {
             "label": "tickets",
+            "button": "buy",
+            "warning": "tickets valid only via goout",
             "tickets": [
                 {
                     "label": "true raver",
@@ -181,8 +185,8 @@
                         "Private bar",
                         "Real clean toilets"
                     ],
-                    "price": "500,- Kč",
-                    "priceSecondWave": "600,- Kč"
+                    "price": "1st WAVE: 500 CZK (approx. 20 EUR)",
+                    "priceSecondWave": "2nd WAVE: 600 CZK (approx. 24 EUR)"
                 },
                 {
                     "label": "raver",
@@ -191,8 +195,8 @@
                         "Grants access to Friday's main stage program featuring both headliners.",
                         "This ticket does not include access to workshops or panel discussions on that day."
                     ],
-                    "price": "300,- Kč",
-                    "priceSecondWave": "400,- Kč"
+                    "price": "1st WAVE: 300 CZK (approx. 12 EUR)",
+                    "priceSecondWave": "2nd WAVE: 400 CZK (approx. 16 EUR)"
                 },
                 {
                     "label": "synth thursday",
@@ -201,7 +205,7 @@
                         "Includes access to the full Thursday program dedicated to analog music.",
                         "The ticket covers entry to the discussion panel, live performances, and DJ sets."
                     ],
-                    "price": "200,- Kč"
+                    "price": "200 CZK (approx. 8 EUR)"
                 },
                 {
                     "label": "local wednesday",
@@ -210,7 +214,7 @@
                         "Grants access to the Wednesday program dedicated to the local electronic music scene.",
                         "Includes entry to the discussion panel and DJ sets."
                     ],
-                    "price": "100,- Kč"
+                    "price": "100 CZK (approx. 4 EUR)"
                 },
                 {
                     "label": "festival suppoerter",
@@ -221,7 +225,7 @@
                         "Private bar",
                         "Real clean toilets"
                     ],
-                    "price": "1500,- Kč"
+                    "price": "1500 CZK (approx. 60 EUR)"
                 }
             ]
         }

@@ -1,14 +1,14 @@
 <script>
+	import { lang } from '$lib/LangStore.js';
+	import langs from '$lib/localization.json';
 	import InfoBlock from '$lib/InfoBlock.svelte';
 	import ContentBlock from '$lib/ContentBlock.svelte';
 	import Heading from '$lib/Heading.svelte';
 	import ArtistBlock from '$lib/ArtistBlock.svelte';
 	import ButtonLink from '$lib/ButtonLink.svelte';
+	import BgImageContentBlock from '$lib/BgImageContentBlock.svelte';
 	import TicketPanel from '$lib/TicketPanel.svelte';
 
-	import { lang } from '$lib/LangStore.js';
-	import langs from '$lib/localization.json';
-	import BgImageContentBlock from '$lib/BgImageContentBlock.svelte';
 
 	const eventLink = 'https://fb.me/e/gImSXNvsV';
 
@@ -26,6 +26,7 @@
 		'https://fb.me/e/gImSXNvsV',
 		'https://fb.me/e/gImSXNvsV'
 	];
+	const secondWaveActive = false;
 </script>
 
 <BgImageContentBlock imagePath="imgs/artists/veitb.jpg">
@@ -137,10 +138,11 @@
 				priceSecondWave={ticket.priceSecondWave}
 				linkSecondWave={ticketLinks[i] instanceof Array ? ticketLinks[i][1] : ticketLinks[i]}
 				twoCols={langs[$lang].tickets.tickets.length - 1 == i && i % 2 == 0}
+				secondWaveActive={secondWaveActive}
 			/>
 		{/each}
 	</div>
-	<p class="tickets-warning">lístky platné pouze nákupem v síti goout</p>
+	<p class="tickets-warning">{langs[$lang].tickets.warning}</p>
 </ContentBlock>
 
 <BgImageContentBlock imagePath="imgs/footer.jpg">

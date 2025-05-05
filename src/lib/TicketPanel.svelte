@@ -1,4 +1,6 @@
 <script>
+	import { lang } from '$lib/LangStore.js';
+	import langs from '$lib/localization.json';
 	import ButtonLink from './ButtonLink.svelte';
 
 	export let label;
@@ -10,6 +12,7 @@
 	export let link;
 	export let linkSecondWave = null;
 	export let twoCols = false;
+	export let secondWaveActive = false;
 </script>
 
 <div class="wrapper" class:two-cols={twoCols}>
@@ -25,18 +28,25 @@
 			{/each}
 		</div>
 		<div class="texts-wrapper">
-			<div class="cta-wrapper">
+			<div class="cta-wrapper" class:second-wave-active={secondWaveActive}>
 				<p>{price}</p>
-				<ButtonLink label="koupit" href={link} marginAuto={false} smallerPaddings={true} />
+				<ButtonLink
+					label={langs[$lang].tickets.button}
+					href={link}
+					marginAuto={false}
+					smallerPaddings={true}
+					disabled={secondWaveActive}
+				/>
 			</div>
 			{#if priceSecondWave}
-				<div class="cta-wrapper">
+				<div class="cta-wrapper" class:second-wave-active={!secondWaveActive}>
 					<p>{priceSecondWave}</p>
 					<ButtonLink
-						label="koupit"
+						label={langs[$lang].tickets.button}
 						href={linkSecondWave}
 						marginAuto={false}
 						smallerPaddings={true}
+						disabled={!secondWaveActive}
 					/>
 				</div>
 			{/if}
@@ -115,23 +125,26 @@
 		padding-top: 0.2rem;
 	}
 
+	.second-wave-active p {
+		color: var(--disabled);
+	}
+
 	@media (max-width: 767.98px) {
-		.wrapper{
+		.wrapper {
 			flex-direction: column;
 		}
 
-		.img{
+		.img {
 			aspect-ratio: 1/1;
 		}
 
-		.texts{
+		.texts {
 			padding: 0;
-			margin-top:.5rem
+			margin-top: 0.5rem;
 		}
 
 		.texts .texts-wrapper:last-of-type {
-		padding-top: 1rem;
+			padding-top: 1rem;
+		}
 	}
-	}
-	
 </style>

@@ -25,6 +25,7 @@
 	:global(:root) {
 		--black: #000000;
 		--shadow: #dadada;
+		--disabled: #c3c3c3;
 		--red: #e73c30;
 		--blue: #7f9ac2;
 		--green: #52774f;
