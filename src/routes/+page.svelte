@@ -143,13 +143,13 @@
 	<p class="tickets-warning">lístky platné pouze nákupem v síti goout</p>
 </ContentBlock>
 
-<!-- <BgImageContentBlock imagePath="imgs/footer.jpg">
+<BgImageContentBlock imagePath="imgs/footer.jpg">
 	<div class="footer">
 		<ButtonLink label="facebook" href="https://www.facebook.com/DHOGHTEAM" marginAuto={false} />
 		<ButtonLink label="instagram" href="https://www.instagram.com/dhoghteam/" marginAuto={false} />
 		<ButtonLink label="dhoghteam@gmail.com" href="mailto:dhoghteam@gmail.com" marginAuto={false} />
 	</div>
-</BgImageContentBlock> -->
+</BgImageContentBlock>
 
 <style>
 	.landing {
@@ -346,23 +346,15 @@
 
 		.tickets-wrapper {
 			padding: calc(0.5 * var(--general-px));
-			grid-template-columns: repeat(1, 1fr);
-			/* grid-template-rows: repeat(5, auto); */
+			display: flex;
+			flex-direction: column;
 		}
-	}
 
-	/* Medium devices (tablets, ≥768px) */
-	@media (min-width: 768px) and (max-width: 991.98px) {
-		/* Styles for tablets */
-	}
-
-	/* Large devices (desktops, ≥992px) */
-	@media (min-width: 992px) and (max-width: 1199.98px) {
-		/* Styles for small desktops */
-	}
-
-	/* Extra large devices (large desktops, ≥1200px) */
-	@media (min-width: 1200px) {
-		/* Styles for large screens */
+		.footer {
+			height: 100%;
+			flex-direction: column;
+			align-items: center;
+			bottom: 0;
+		}
 	}
 </style>

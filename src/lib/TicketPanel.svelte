@@ -76,7 +76,7 @@
 
 	.img {
 		flex: 1;
-		/* min-height: 400px; */
+		min-height: 400px;
 		/* aspect-ratio: 1 / 1; */
 		background-size: cover;
 		background-position: center;
@@ -114,4 +114,24 @@
 	.cta-wrapper:nth-child(2) {
 		padding-top: 0.2rem;
 	}
+
+	@media (max-width: 767.98px) {
+		.wrapper{
+			flex-direction: column;
+		}
+
+		.img{
+			aspect-ratio: 1/1;
+		}
+
+		.texts{
+			padding: 0;
+			margin-top:.5rem
+		}
+
+		.texts .texts-wrapper:last-of-type {
+		padding-top: 1rem;
+	}
+	}
+	
 </style>
