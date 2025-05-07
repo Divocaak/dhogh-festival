@@ -18,5 +18,6 @@
 		padding: 0;
 		margin: 0;
 		background-color: var(--bg-color);
+		/* min-height: 100vh; */
 	}
 </style>

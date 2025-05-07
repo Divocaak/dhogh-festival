@@ -9,7 +9,6 @@
 	import BgImageContentBlock from '$lib/BgImageContentBlock.svelte';
 	import TicketPanel from '$lib/TicketPanel.svelte';
 
-
 	const eventLink = 'https://fb.me/e/gImSXNvsV';
 
 	const ticketImgs = [
@@ -19,14 +18,10 @@
 		'artists/alex.jpg',
 		'artists/veitb.jpg'
 	];
-	const ticketLinks = [
-		['https://fb.me/e/gImSXNvsV', 'https://fb.me/e/gImSXNvsV'],
-		['https://fb.me/e/gImSXNvsV', 'https://fb.me/e/gImSXNvsV'],
-		'https://fb.me/e/gImSXNvsV',
-		'https://fb.me/e/gImSXNvsV',
-		'https://fb.me/e/gImSXNvsV'
-	];
+
 	const secondWaveActive = false;
+
+	/* TODO glitch fx (cahnge svgs) */
 </script>
 
 <BgImageContentBlock imagePath="imgs/artists/veitb.jpg">
@@ -68,15 +63,15 @@
 	</div>
 </ContentBlock>
 
-<BgImageContentBlock imagePath="imgs/values.jpg">
+<ContentBlock backgroundColor="var(--red)">
+	<Heading heading={langs[$lang].values.label} />
 	<div class="values">
-		<h1>{langs[$lang].values.label}</h1>
 		{#each langs[$lang].values.values as value}
 			<h2>{value.label}</h2>
 			<p>{value.desc}</p>
 		{/each}
 	</div>
-</BgImageContentBlock>
+</ContentBlock>
 
 <ContentBlock backgroundColor="var(--green)">
 	<Heading heading={langs[$lang].programme.label} />
@@ -85,10 +80,6 @@
 		<ArtistBlock name="Alex Wilcox (US)" imgPath="alex.jpg" />
 		<ArtistBlock name="Veit B" imgPath="veitb.jpg" />
 		<ArtistBlock name="Mista Humiks" imgPath="humiks.jpg" />
-		<ArtistBlock name="Alex Wilcox (US)" imgPath="alex.jpg" />
-		<ArtistBlock name="Tigerhead (DE)" imgPath="veitb.jpg" />
-		<ArtistBlock name="Mista Humiks" imgPath="humiks.jpg" />
-		<ArtistBlock name="Veit B" imgPath="veitb.jpg" />
 	</div>
 	<div class="program-smaller-wrapper">
 		<div class="wrapper">
@@ -134,15 +125,13 @@
 				texts={ticket.texts}
 				imgPath={ticketImgs[i]}
 				price={ticket.price}
-				link={ticketLinks[i] instanceof Array ? ticketLinks[i][0] : ticketLinks[i]}
 				priceSecondWave={ticket.priceSecondWave}
-				linkSecondWave={ticketLinks[i] instanceof Array ? ticketLinks[i][1] : ticketLinks[i]}
 				twoCols={langs[$lang].tickets.tickets.length - 1 == i && i % 2 == 0}
-				secondWaveActive={secondWaveActive}
+				{secondWaveActive}
 			/>
 		{/each}
 	</div>
-	<p class="tickets-warning">{langs[$lang].tickets.warning}</p>
+	<p class="tickets-warning p-styled">{langs[$lang].tickets.warning}</p>
 </ContentBlock>
 
 <BgImageContentBlock imagePath="imgs/footer.jpg">
@@ -191,16 +180,16 @@
 	}
 
 	.festival-content-wrapper .texts {
-		flex: 3;
+		/* flex: 3; */
+		flex: 1;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		padding-left: calc(2 * var(--general-px));
-		padding-right: var(--general-px);
+		padding: 0 calc(2 * var(--general-px));
 	}
 
 	.festival-content-wrapper .img-container {
-		flex: 2;
+		flex: 1;
 		aspect-ratio: 1 / 1;
 		background-image: url('/imgs/values.jpg');
 		background-size: cover;
@@ -215,9 +204,9 @@
 		align-items: center;
 		align-content: space-around;
 		height: 100%;
+		padding: calc(var(--general-px)) 0;
 	}
 
-	.values h1,
 	.values h2,
 	.values p {
 		color: var(--shadow);

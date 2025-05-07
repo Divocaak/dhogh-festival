@@ -2,22 +2,22 @@
 
 <style>
 	@font-face {
-		font-family: 'InterItalic';
-		src: url('fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf');
+		font-family: 'Inter';
+		src: url('/fonts/Inter/Inter-VariableFont_opsz,wght.ttf');
 		font-weight: 100 1000;
-		font-style: italic;
+		font-style: normal;
 	}
 
 	@font-face {
-		font-family: 'Inter';
-		src: url('fonts/Inter/Inter-VariableFont_opsz,wght.ttf');
+		font-family: 'RobotoMono';
+		src: url('/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf');
 		font-weight: 100 1000;
 		font-style: normal;
 	}
 
 	@font-face {
 		font-family: 'PPSupplyMono';
-		src: url('fonts/PPSupplyMono-Variable.ttf');
+		src: url('/fonts/PPSupplyMono-Variable.ttf');
 		font-weight: 100 1000;
 		font-style: normal;
 	}
@@ -42,6 +42,7 @@
 		--fs-18: clamp(18px, 0.94vw, 1.75rem);
 		--fs-20: clamp(20px, 1.04vw, 2rem);
 		--fs-24: clamp(24px, 1.25vw, 2.5rem);
+		--fs-28: clamp(28px, 1.45vw, 1.75rem);
 		--fs-32: clamp(32px, 1.67vw, 3rem);
 		--fs-48: clamp(48px, 2.5vw, 3rem);
 		--fs-64: clamp(64px, 3.33vw, 4rem);
@@ -53,15 +54,14 @@
 		font-family: 'PPSupplyMono', monospace;
 		font-style: normal;
 
-		letter-spacing: -0.02em;
-		word-spacing: -0.3em;
-
 		color: var(--black);
 	}
 
 	:global(p) {
+		font-family: 'RobotoMono', monospace;
 		line-height: 1.5em;
-		font-weight: 300;
+		font-weight: 400;
+		font-size: var(--fs-24);
 	}
 
 	:global(h1, h2, h3, h4, h5, h6) {
@@ -80,10 +80,10 @@
 
 	:global(body) {
 		margin: 0;
-        background-color: var(--black);
+		background-color: var(--black);
 	}
 
-	:global(h1){
-		font-size: var(--fs-32);
+	:global(h1) {
+		font-size: var(--fs-48);
 	}
 </style>
