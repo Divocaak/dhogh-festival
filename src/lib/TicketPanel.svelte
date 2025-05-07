@@ -9,8 +9,6 @@
 	export let imgPath;
 	export let price;
 	export let priceSecondWave = null;
-	export let link;
-	export let linkSecondWave = null;
 	export let twoCols = false;
 	export let secondWaveActive = false;
 </script>
@@ -29,10 +27,10 @@
 		</div>
 		<div class="texts-wrapper">
 			<div class="cta-wrapper" class:second-wave-active={secondWaveActive}>
-				<p>{price}</p>
+				<p class="p-styled">{price}</p>
 				<ButtonLink
 					label={langs[$lang].tickets.button}
-					href={link}
+					href="https://goout.net/cs/dhogh-festival-2025/szjdaux/"
 					marginAuto={false}
 					smallerPaddings={true}
 					disabled={secondWaveActive}
@@ -40,10 +38,10 @@
 			</div>
 			{#if priceSecondWave}
 				<div class="cta-wrapper" class:second-wave-active={!secondWaveActive}>
-					<p>{priceSecondWave}</p>
+					<p class="p-styled">{priceSecondWave}</p>
 					<ButtonLink
 						label={langs[$lang].tickets.button}
-						href={linkSecondWave}
+						href="https://goout.net/cs/dhogh-festival-2025/szjdaux/"
 						marginAuto={false}
 						smallerPaddings={true}
 						disabled={!secondWaveActive}
