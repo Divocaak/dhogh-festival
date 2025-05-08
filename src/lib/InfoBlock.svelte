@@ -24,10 +24,19 @@
 		/>
 	</svg>
 	<div class="texts-container">
-		<p class="p-styled">electronic<br />music<br />festival</p>
-		<p class="p-styled">žižkárna<br />18-20-06<br />2026</p>
+		<p class="pp-supply">electronic<br />music<br />festival</p>
+		<p class="pp-supply">žižkárna<br />18-20-06<br />2026</p>
 	</div>
-	<Button label="cz/en" onclick={() => lang.set($lang === "cs" ? 'en' : "cs")} />
+	<div class="artists-container">
+		<h2>tigerhead</h2>
+		<h2>alex wilcox</h2>
+		<h2>wnchnz</h2>
+		<h2>dj alyaz</h2>
+		<h2>surealita</h2>
+		<h2>jadran</h2>
+	</div>
+	<p class="pp-supply" style="color:var(--disabled)">a další ...</p>
+	<!-- <Button label="cz/en" onclick={() => lang.set($lang === "cs" ? 'en' : "cs")} /> -->
 </div>
 
 <style>
@@ -36,13 +45,11 @@
 	}
 
 	.wrapper {
-		position: absolute;
 		display: flex;
-		flex-direction: row;
-		justify-content: start;
-		align-items: center;
-		gap: 5rem;
-		padding: 2rem 3rem;
+		flex-direction: column;
+		justify-content: center; /* Horizontal center */
+		align-items: center; /* Vertical center */
+		height: 100vh;
 	}
 
 	p {
@@ -57,6 +64,23 @@
 		justify-content: center;
 		align-items: center;
 		gap: 5rem;
+	}
+
+	.artists-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center; /* center the rows horizontally */
+		gap: 1rem;
+		max-width: 600px; /* optional: limit width to help with wrapping */
+		margin: 0 auto;
+	}
+
+	.artists-container h2 {
+		background-color: var(--green);
+		color: var(--shadow);
+		margin: 0;
+		padding: 0.5rem;
+		width: max-content;
 	}
 
 	path {

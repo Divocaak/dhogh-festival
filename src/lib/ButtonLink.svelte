@@ -7,6 +7,7 @@
 	export let marginAuto = true;
 	export let smallerPaddings = false;
 	export let disabled = false;
+	export let isFooter = false;
 </script>
 
 <a
@@ -14,6 +15,7 @@
 	class:margin-auto={marginAuto}
 	class:smaller-paddings={smallerPaddings}
 	class:disabled
+	class:is-footer={isFooter}
 	{href}
 	{target}>{label}</a
 >
@@ -60,5 +62,9 @@
 	.disabled:hover {
 		color: var(--background-color);
 		background-color: var(--disabled);
+	}
+
+	.is-footer{
+		font-size: var(--fs-28);
 	}
 </style>

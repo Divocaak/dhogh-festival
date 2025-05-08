@@ -61,55 +61,70 @@
             "warning": "lístky platné pouze nákupem v síti goout",
             "tickets": [
                 {
-                    "label": "true raver",
-                    "desc": "full festival pass",
+                    "label": "true_raver",
+                    "subheading": "FULL_FESTIVAL_PASS",
+                    "desc": "vstupenka na všechny festivalové dny včetně páteční afterparty",
                     "texts": [
-                        "Vstupenka na všechny dny festivalu (18. - 20. 6), diskuze a následnou afterparty s omezenou kapacitou.",
-                        "V ceně vstupenky je také možnost zúčastnit se workshopů (Vaše účast bude potvrzena na základě dotazníku). ",
-                        "Vlastní bar",
-                        "Normální toalety"
+                        {
+                            "label": "18_06 středa/wednesday",
+                            "texts":[
+                                "local_djs",
+                                "ableton_workshop",
+                                "dj_workshop"
+                            ]
+                        },
+                        {
+                            "label": "19_06 čtvrtek/thursday",
+                            "texts":[
+                                "live_sets",
+                                "synth_workshop"
+                            ]
+                        },
+                        {
+                            "label": "20_06 pátek/friday",
+                            "texts":[
+                                "open_air(17-22)"
+                            ],
+                            "afterpartyWarning": "omezená kapacita"
+                        }
                     ],
-                    "price": "1. VLNA: 500,- Kč",
-                    "priceSecondWave": "2. VLNA: 600,- Kč"
+                    "price": "500,-"
                 },
                 {
                     "label": "raver",
-                    "desc": "Pouze páteční Main Stage",
+                    "subheading": "FRIDAY_OPEN_AIR",
+                    "desc": "vstupenka na páteční program na hlavní stage, kde vystoupí oba headlineři",
                     "texts": [
-                        "Vstupenka na páteční program na hlavní stage, kde vystoupí oba headlineři.",
-                        "S touto vstupenkou není možné se účastnit workshopů ani diskuzí v tento den."
+                        {
+                            "label": "20_06 pátek/friday",
+                            "texts":[
+                                "open_air(17-22)"
+                            ]
+                        }
                     ],
-                    "price": "1. VLNA: 300,- Kč",
-                    "priceSecondWave": "2. VLNA: 400,- Kč"
+                    "price": "300,-"
                 },
                 {
-                    "label": "synth thursday",
-                    "desc": "Pouze čtvrteční program",
+                    "label": "wormuper",
+                    "subheading": "WED/THU_for_education&community",
                     "texts": [
-                        "Vstupenka na čtvrteční program věnovaný analogové hudbě.",
-                        "V ceně vstupenky je diskuze a následné koncerty a DJ sety"
+                        {
+                            "label": "18_06 středa/wednesday",
+                            "texts":[
+                                "local_djs",
+                                "ableton_workshop",
+                                "dj_workshop"
+                            ]
+                        },
+                        {
+                            "label": "19_06 čtvrtek/thursday",
+                            "texts":[
+                                "live_sets",
+                                "synth_workshop"
+                            ]
+                        }
                     ],
-                    "price": "200,- Kč"
-                },
-                {
-                    "label": "local wednesday",
-                    "desc": "Pouze středeční program",
-                    "texts": [
-                        "Vstupenka na středeční program věnovaný lokální scéně",
-                        "V ceně vstupenky je diskuze a DJ sety"
-                    ],
-                    "price": "100,- Kč"
-                },
-                {
-                    "label": "festival suppoerter",
-                    "desc": "supporter festival pass",
-                    "texts": [
-                        "Vstupenka na všechny dny festivalu (18. - 20. 6), diskuze a následnou afterparty s omezenou kapacitou.",
-                        "V ceně vstupenky je zaručená účast na workshopech",
-                        "Vlastní bar",
-                        "Normální toalety"
-                    ],
-                    "price": "1500,- Kč"
+                    "price": "100-200,-"
                 }
             ]
         }

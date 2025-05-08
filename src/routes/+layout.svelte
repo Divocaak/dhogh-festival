@@ -45,6 +45,7 @@
 		--fs-28: clamp(28px, 1.45vw, 1.75rem);
 		--fs-32: clamp(32px, 1.67vw, 3rem);
 		--fs-48: clamp(48px, 2.5vw, 3rem);
+		--fs-54: clamp(54px, 2.8vw, 3.3rem);
 		--fs-64: clamp(64px, 3.33vw, 4rem);
 		--fs-72: clamp(72px, 3.75vw, 4.5rem);
 		--fs-150: clamp(150px, 9.81vw, 9.37rem);
@@ -62,6 +63,11 @@
 		line-height: 1.5em;
 		font-weight: 400;
 		font-size: var(--fs-24);
+	}
+	
+	:global(.pp-supply){
+		font-family: "PPSupplyMono", monospace;
+		font-weight: 300;
 	}
 
 	:global(h1, h2, h3, h4, h5, h6) {
@@ -85,5 +91,9 @@
 
 	:global(h1) {
 		font-size: var(--fs-48);
+	}
+
+	:global(h2){
+		font-size: var(--fs-32);
 	}
 </style>
