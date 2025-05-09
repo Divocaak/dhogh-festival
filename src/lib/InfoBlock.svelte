@@ -87,7 +87,7 @@
 		fill: var(--text-color);
 	}
 
-	@media (max-width: 767px) {
+	@media (max-width: 1200px) {
 		.wrapper {
 			flex-direction: column;
 			gap: 1rem;

@@ -1,7 +1,7 @@
 <script>
-    import { lang } from '$lib/LangStore.js';
+	import { lang } from '$lib/LangStore.js';
 	import langs from '$lib/localization.json';
-	import ButtonLink from "./ButtonLink.svelte";
+	import ButtonLink from './ButtonLink.svelte';
 
 	export let leadTextColor = 'var(--shadow)';
 	export let cardName = 'card name';
@@ -9,7 +9,7 @@
 	export let imgPath = 'raver.jpg';
 	export let desc = null;
 	export let texts = [];
-    export let price = "0";
+	export let price = '0';
 
 	let card;
 	let cardInner;
@@ -64,48 +64,52 @@
 </script>
 
 <div class="ticket-wrapper">
-<button
-	class="card"
-	bind:this={card}
-	data-filter-color={filterColor}
-	on:mouseenter={calculateAngle}
-	on:mousemove={calculateAngle}
-	on:mouseleave={resetCard}
-	on:click={flipCard}
-	style="--lead-text-color: {leadTextColor}"
->
-	<div class="card-inner" bind:this={cardInner} class:flipped>
-		<div class="inner-card" bind:this={innerCard}>
-			<span class="glare"></span>
-			<div class="circle"></div>
-			<div class="circle"><p class="pp-supply">?</p></div>
-			<div class="bg-image" style="background-image: url('/imgs/tickets/{imgPath}');"></div>
-			<div class="texts-wrapper">
-				<h1>{cardName}</h1>
-				<p class="pp-supply">({subheading})</p>
+	<button
+		class="card"
+		bind:this={card}
+		data-filter-color={filterColor}
+		on:mouseenter={calculateAngle}
+		on:mousemove={calculateAngle}
+		on:mouseleave={resetCard}
+		on:click={flipCard}
+		style="--lead-text-color: {leadTextColor}"
+	>
+		<div class="card-inner" bind:this={cardInner} class:flipped>
+			<div class="inner-card" bind:this={innerCard}>
+				<span class="glare"></span>
+				<div class="circle"></div>
+				<div class="circle"><p class="pp-supply">?</p></div>
+				<div class="bg-image" style="background-image: url('/imgs/tickets/{imgPath}');"></div>
+				<div class="texts-wrapper">
+					<h1>{cardName}</h1>
+					<p class="pp-supply">({subheading})</p>
+				</div>
+			</div>
+			<div class="inner-card-backface" bind:this={backface}>
+				<div class="circle"></div>
+				<div class="circle"><p class="pp-supply" style="font-size: 50px;">&#10005;</p></div>
+				<div class="ticket-detail">
+					{#if desc}<p class="pp-supply desc">{desc}</p>{/if}
+					{#each texts as programme}
+						<div class="programme-day">
+							<h3>{programme.label}</h3>
+							{#each programme.texts as text}
+								<p class="pp-supply">{text}</p>
+							{/each}
+						</div>
+					{/each}
+				</div>
 			</div>
 		</div>
-		<div class="inner-card-backface" bind:this={backface}>
-			<div class="circle"></div>
-			<div class="circle"><p class="pp-supply" style="font-size: 50px;">&#10005;</p></div>
-			<div class="ticket-detail">
-				{#if desc}<p class="pp-supply desc">{desc}</p>{/if}
-				{#each texts as programme}
-					<div class="programme-day">
-						<h3>{programme.label}</h3>
-						{#each programme.texts as text}
-							<p class="pp-supply">{text}</p>
-						{/each}
-					</div>
-				{/each}
-			</div>
-		</div>
+	</button>
+	<div class="cta">
+		<h2>{price}</h2>
+		<ButtonLink
+			label={langs[$lang].tickets.button}
+			href="https://goout.net/cs/dhogh-festival-2025/szjdaux/"
+			marginAuto={false}
+		/>
 	</div>
-</button>
-<div class="cta">
-    <h2>{price}</h2>
-    <ButtonLink label="{langs[$lang].tickets.button}" href="https://goout.net/cs/dhogh-festival-2025/szjdaux/" marginAuto={false}/>
-</div>
 </div>
 
 <style>
@@ -114,18 +118,18 @@
 		--card-background: #0f0f0f;
 	}
 
-    .ticket-wrapper{
-        display: flex;
-        flex-direction: column;
-    }
+	.ticket-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
 
-    .cta{
-        padding-top: 1.5rem;
-    }
+	.cta {
+		padding-top: 1.5rem;
+	}
 
-    .cta h2{
-        margin: 0;
-    }
+	.cta h2 {
+		margin: 0;
+	}
 
 	.glare {
 		position: absolute;
@@ -286,5 +290,12 @@
 	.ticket-detail .desc {
 		font-size: var(--fs-16);
 		line-height: 1.2rem;
+	}
+
+	@media (max-width: 1200px) {
+		.card {
+			width: 100%;
+			height: 500px;
+		}
 	}
 </style>

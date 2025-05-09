@@ -66,5 +66,9 @@
 
 	.is-footer{
 		font-size: var(--fs-28);
+		padding: 1.25rem 0rem;
+		text-align: center;
+		width: 100%;
+
 	}
 </style>

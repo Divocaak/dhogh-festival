@@ -116,10 +116,10 @@
 <ContentBlock backgroundColor="var(--green)" heading="festival">
 	<div class="festival-content-wrapper">
 		<p>{langs[$lang].festival[0]}</p>
-		<img src="/imgs/artists/veitb.jpg" />
+		<img src="/imgs/artists/veitb.jpg" alt="about" />
 	</div>
 	<div class="festival-content-wrapper">
-		<img src="/imgs/values.jpg" />
+		<img src="/imgs/values.jpg" alt="mission" />
 		<p>{langs[$lang].festival[1]}</p>
 	</div>
 	<div class="values-wrapper">
@@ -187,17 +187,6 @@
 		height: auto;
 	}
 
-	@media (max-width: 1200px) {
-		.festival-content-wrapper {
-			flex-direction: column;
-		}
-
-		.festival-content-wrapper p {
-			width: calc(100% - 2 * 3rem);
-			padding: 0 3rem;
-		}
-	}
-
 	.values-wrapper {
 		padding: 10rem 0;
 		display: flex;
@@ -221,42 +210,6 @@
 		margin: 0;
 	}
 
-	.program-main-wrapper {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: repeat(2, auto);
-		gap: 2rem;
-		padding: calc(2 * var(--general-px));
-		padding-bottom: 0;
-	}
-
-	.program-smaller-wrapper {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		padding: 0 calc(2 * var(--general-px));
-		padding-top: var(--general-px);
-	}
-
-	.program-smaller-wrapper .wrapper {
-		width: 100%;
-	}
-
-	.program-smaller-wrapper .wrapper h2,
-	.program-smaller-wrapper .wrapper h3,
-	.program-smaller-wrapper .wrapper p {
-		color: var(--shadow);
-	}
-
-	.program-smaller-wrapper:last-of-type .wrapper h2:first-of-type {
-		padding-bottom: 2rem;
-	}
-
-	.button-wrapper {
-		width: 100%;
-		padding: 7rem 0;
-	}
-
 	.tickets-wrapper {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -275,65 +228,36 @@
 	}
 
 	/* Small devices (phones, ≥576px) */
-	@media (max-width: 767.98px) {
-		.landing {
-			top: 50%;
-		}
-
-		.landing .content-wrapper h1 {
-			font-size: var(--fs-24);
-		}
-
+	@media (max-width: 1200px) {
 		.festival-content-wrapper {
 			flex-direction: column;
 		}
 
-		.festival-content-wrapper .texts {
-			padding: calc(0.5 * var(--general-px));
+		.festival-content-wrapper:nth-of-type(2) {
+			flex-direction: column-reverse;
 		}
 
-		.values {
-			margin: 0 calc(0.5 * var(--general-px));
+		.festival-content-wrapper p {
+			width: calc(100% - 2 * 3rem);
+			padding: 0 3rem;
 		}
 
-		.values h1 {
-			font-size: var(--fs-20);
+		.festival-content-wrapper img {
+			width: 100%;
 		}
 
-		.values h2 {
-			font-size: var(--fs-18);
-		}
-
-		.values p {
-			font-size: var(--fs-12);
-		}
-
-		.program-main-wrapper {
-			grid-template-columns: repeat(1, 1fr);
-			padding: calc(0.5 * var(--general-px));
-		}
-
-		.program-smaller-wrapper {
-			padding: calc(0.5 * var(--general-px));
+		.values-wrapper {
 			flex-direction: column;
-			text-align: center;
 		}
 
-		.program-smaller-wrapper:last-of-type .wrapper h2:first-of-type {
-			padding-bottom: 0;
+		.value {
+			width: 100%;
 		}
 
 		.tickets-wrapper {
-			padding: calc(0.5 * var(--general-px));
+			padding: 0;
 			display: flex;
 			flex-direction: column;
-		}
-
-		.footer {
-			height: 100%;
-			flex-direction: column;
-			align-items: center;
-			bottom: 0;
 		}
 	}
 </style>

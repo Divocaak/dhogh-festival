@@ -76,7 +76,6 @@
 
 	<div class="heading-wrapper">
 		<h1>{heading}</h1>
-
 		<svg
 			width={svgs[headingSvgCounter].w}
 			height={svgs[headingSvgCounter].h}
@@ -120,6 +119,7 @@
 	}
 
 	.heading-wrapper svg {
+		width: 100%;
 		fill: var(--heading-bg-color);
 	}
 
@@ -133,5 +133,11 @@
 		top: -150px;
 		width: 100%;
 		fill: var(--bg-color);
+	}
+
+	@media (max-width: 1200px) {
+		.top-svg {
+			top: -120px;
+		}
 	}
 </style>
