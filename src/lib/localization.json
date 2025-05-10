@@ -28,35 +28,83 @@
                 }
             ]
         },
-        "programme": {
-            "label": "program",
-            "workshops": {
-                "label": "workshopy",
-                "texts": [
-                    "Veit B: Základy DJingu",
-                    "Prague Synth Library: xxx"
-                ]
-            },
-            "discussions": {
-                "label": "diskuze",
-                "texts": [
-                    {
-                        "label": "Kultura a její přínos pro město:",
-                        "desc": "Společně se zástupci odboru kultury, týmu Evropského hlavního města kultury a místním architektem budeme debatovat o přínosech a pozitivních externalitách mainstreamové i alternativní kultury pro města."
-                    },
-                    {
-                        "label": "Analogová hudba a její místo na dnešní scéně",
-                        "desc": "Společně se zástupci Prague Synth Library, lokálním výrobcem syntetizátorů a hudebníky využívajícími analogovou hudbu v jejich tvorbě probereme její přínosy i úskalí. Jaká hlavní pozitiva přináší a kde jsou její limity."
-                    },
-                    {
-                        "label": "Alternativní elektronická scéna v menších regionech vs velká města",
-                        "desc": "Společně s vystupujícími umělci, pořadatelem rave parties v Praze a promotéry budeme diskutovat o rozdílech alternativní elektronické scény. Jaká je její pozice v jednotlivých sídlech a může vůbec existovat stabilní scéna v menších městech."
-                    }
-                ]
-            }
+        "artists": {
+            "label": "umělci",
+            "headliners": [
+                {
+                    "name": "tigerhead",
+                    "desc": "Cílem festivalu je také přiblížit elektronickou hudbu",
+                    "img": "veitb.jpg"
+                },
+                {
+                    "name": "alex_wilcox",
+                    "desc": "Cílem festivalu je také přiblížit elektronickou hudbu",
+                    "img": "veitb.jpg"
+                },
+                {
+                    "name": "wnchnz",
+                    "desc": "Cílem festivalu je také přiblížit elektronickou hudbu",
+                    "img": "veitb.jpg"
+                },
+                {
+                    "name": "dj_alyaz",
+                    "desc": "Cílem festivalu je také přiblížit elektronickou hudbu",
+                    "img": "veitb.jpg"
+                },
+                {
+                    "name": "surealita",
+                    "desc": "Cílem festivalu je také přiblížit elektronickou hudbu",
+                    "img": "veitb.jpg"
+                },
+                {
+                    "name": "jadran",
+                    "desc": "Cílem festivalu je také přiblížit elektronickou hudbu",
+                    "img": "veitb.jpg"
+                },
+                {
+                    "name": "mor4m",
+                    "desc": "Cílem festivalu je také přiblížit elektronickou hudbu",
+                    "img": "veitb.jpg"
+                },
+                {
+                    "name": "artist_1",
+                    "desc": "Cílem festivalu je také přiblížit elektronickou hudbu",
+                    "img": "veitb.jpg"
+                }
+            ],
+            "supporters": [
+                "veit_b",
+                "body_bass",
+                "edward traumaxowski"
+            ]
+        },
+        "education": {
+            "label": "education",
+            "events": [
+                {
+                    "name": "dj_workshop",
+                    "desc": "lorem ipsum",
+                    "img": "veitb.jpg"
+                },
+                {
+                    "name": "diskuze",
+                    "desc": "workshop",
+                    "img": "veitb.jpg"
+                },
+                {
+                    "name": "workshop",
+                    "desc": "lorem ipsum",
+                    "img": "veitb.jpg"
+                },
+                {
+                    "name": "diskuze",
+                    "desc": "lorem ipsum",
+                    "img": "veitb.jpg"
+                }
+            ]
         },
         "tickets": {
-            "label": "tickets",
+            "label": "lístky",
             "button": "koupit",
             "warning": "lístky platné pouze nákupem v síti goout",
             "tickets": [
@@ -67,7 +115,7 @@
                     "texts": [
                         {
                             "label": "18_06 středa/wednesday",
-                            "texts":[
+                            "texts": [
                                 "local_djs",
                                 "ableton_workshop",
                                 "dj_workshop"
@@ -75,20 +123,21 @@
                         },
                         {
                             "label": "19_06 čtvrtek/thursday",
-                            "texts":[
+                            "texts": [
                                 "live_sets",
                                 "synth_workshop"
                             ]
                         },
                         {
                             "label": "20_06 pátek/friday",
-                            "texts":[
+                            "texts": [
                                 "open_air(17-22)"
                             ],
                             "afterpartyWarning": "omezená kapacita"
                         }
                     ],
-                    "price": "500,-"
+                    "price": "500,-",
+                    "img": "001.jpg"
                 },
                 {
                     "label": "raver",
@@ -97,12 +146,13 @@
                     "texts": [
                         {
                             "label": "20_06 pátek/friday",
-                            "texts":[
+                            "texts": [
                                 "open_air(17-22)"
                             ]
                         }
                     ],
-                    "price": "300,-"
+                    "price": "300,-",
+                    "img": "002.jpg"
                 },
                 {
                     "label": "wormuper",
@@ -110,7 +160,7 @@
                     "texts": [
                         {
                             "label": "18_06 středa/wednesday",
-                            "texts":[
+                            "texts": [
                                 "local_djs",
                                 "ableton_workshop",
                                 "dj_workshop"
@@ -118,129 +168,14 @@
                         },
                         {
                             "label": "19_06 čtvrtek/thursday",
-                            "texts":[
+                            "texts": [
                                 "live_sets",
                                 "synth_workshop"
                             ]
                         }
                     ],
-                    "price": "100-200,-"
-                }
-            ]
-        }
-    },
-    "en": {
-        "landing": {
-            "texts": [
-                "3 days of electronic music",
-                "15 artists",
-                "+ workshops and discussions"
-            ]
-        },
-        "festival": [
-            "Our festival weaves together dance music, art, philosophy, and the collective energy of the underground. It's more than a night out—it's a space for reflection, connection, and cultural discovery.",
-            "We celebrate electronic music not only as sound but as a force that shapes urban nightlife and community. Through performances, discussions, and shared experiences, we open the scene to new audiences and the next generation of creators.",
-            "Whether you're here to dance, learn, or get inspired to create, this is where the journey begins. Join us—and be part of something that echoes beyond the dancefloor."
-        ],
-        "values": {
-            "label": "our values",
-            "values": [
-                {
-                    "label": "Creative Scenography",
-                    "desc": "Each club night is shaped by a unique scenographic concept, designed to let visitors experience the space in new and unexpected ways. A strong part of our approach is DIY and re-use—most of our props are made by repurposing objects that once served entirely different functions."
-                },
-                {
-                    "label": "safe space",
-                    "desc": "Our space is more than just a place for music—it's a refuge of safety, respect, and acceptance. Everyone who walks through our doors becomes part of a community where background, identity, or experience doesn't matter."
-                },
-                {
-                    "label": "Community and Sharing",
-                    "desc": "A party is never just about the music—it's about the people. The collective creates a space for connection, mutual inspiration, and support between artists, organizers, and visitors alike."
-                }
-            ]
-        },
-        "programme": {
-            "label": "programme",
-            "workshops": {
-                "label": "workshops",
-                "texts": [
-                    "Veit B: Basics of DJing",
-                    "Prague Synth Library: xxx"
-                ]
-            },
-            "discussions": {
-                "label": "Discussions (will be held in Czech language)",
-                "texts": [
-                    {
-                        "label": "Culture and Its Value to the City",
-                        "desc": "Together with representatives from the Department of Culture, the European Capital of Culture team, and a local architect, we'll explore the benefits and positive externalities that both mainstream and alternative culture bring to urban environments."
-                    },
-                    {
-                        "label": "Analog Music and Its Role in Today's Scene",
-                        "desc": "In collaboration with members of the Prague Synth Library, a local synthesizer maker, and musicians who incorporate analog sound into their work, we'll discuss the strengths and challenges of analog music. What are its greatest advantages—and where do its limitations lie?"
-                    },
-                    {
-                        "label": "The Alternative Electronic Scene: Small Regions vs. Big Cities",
-                        "desc": "Joined by performing artists, a Prague-based rave organizer, and local promoters, we'll dive into the contrasts between alternative electronic scenes in small towns and major cities. What is the scene's standing in different locations—and can a stable underground community truly thrive in smaller regions?"
-                    }
-                ]
-            }
-        },
-        "tickets": {
-            "label": "tickets",
-            "button": "buy",
-            "warning": "tickets valid only via goout",
-            "tickets": [
-                {
-                    "label": "true raver",
-                    "desc": "full festival pass",
-                    "texts": [
-                        "Includes entry to all festival days, panel discussions, and an exclusive-capacity afterparty.",
-                        "Your ticket also grants access to workshops—participation will be confirmed via a short registration form.",
-                        "Private bar",
-                        "Real clean toilets"
-                    ],
-                    "price": "1st WAVE: 500 CZK (approx. 20 EUR)",
-                    "priceSecondWave": "2nd WAVE: 600 CZK (approx. 24 EUR)"
-                },
-                {
-                    "label": "raver",
-                    "desc": "Friday Main Stage only",
-                    "texts": [
-                        "Grants access to Friday's main stage program featuring both headliners.",
-                        "This ticket does not include access to workshops or panel discussions on that day."
-                    ],
-                    "price": "1st WAVE: 300 CZK (approx. 12 EUR)",
-                    "priceSecondWave": "2nd WAVE: 400 CZK (approx. 16 EUR)"
-                },
-                {
-                    "label": "synth thursday",
-                    "desc": "Thursday only",
-                    "texts": [
-                        "Includes access to the full Thursday program dedicated to analog music.",
-                        "The ticket covers entry to the discussion panel, live performances, and DJ sets."
-                    ],
-                    "price": "200 CZK (approx. 8 EUR)"
-                },
-                {
-                    "label": "local wednesday",
-                    "desc": "Wednesday only",
-                    "texts": [
-                        "Grants access to the Wednesday program dedicated to the local electronic music scene.",
-                        "Includes entry to the discussion panel and DJ sets."
-                    ],
-                    "price": "100 CZK (approx. 4 EUR)"
-                },
-                {
-                    "label": "festival suppoerter",
-                    "desc": "supporter festival pass",
-                    "texts": [
-                        "Includes access to all festival days, panel discussions, and an exclusive-capacity afterparty.",
-                        "The ticket guarantees participation in workshops",
-                        "Private bar",
-                        "Real clean toilets"
-                    ],
-                    "price": "1500 CZK (approx. 60 EUR)"
+                    "price": "100-200,-",
+                    "img": "003.jpg"
                 }
             ]
         }

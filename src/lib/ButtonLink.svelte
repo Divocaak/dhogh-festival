@@ -69,6 +69,6 @@
 		padding: 1.25rem 0rem;
 		text-align: center;
 		width: 100%;
-
+		background-color: var(--grey);
 	}
 </style>

@@ -49,14 +49,16 @@
 		headingSvgCounter = (headingSvgCounter + 1) % svgs.length;
 	}, 1000); */
 
-	let topSvgCounter = topSvg;
-	const topSvgInterval = setInterval(() => {
-		topSvgCounter = (topSvgCounter + 1) % topSvgs.length;
-	}, 1000);
+	let topSvgCounter = topSvg ?? 0;
+	if (topSvg !== null) {
+		const topSvgInterval = setInterval(() => {
+			topSvgCounter = (topSvgCounter + 1) % topSvgs.length;
+		}, 1000);
+	}
 
 	onDestroy(() => {
 		/* clearInterval(headingSvgInterval); */
-		clearInterval(topSvgInterval);
+		if (topSvg) clearInterval(topSvgInterval);
 	});
 </script>
 
@@ -64,15 +66,17 @@
 	class="wrapper"
 	style="--bg-color: {backgroundColor}; --heading-color: {headingClr}; --heading-bg-color: {headingBgClr};"
 >
-	<svg
-		width={topSvgs[topSvgCounter].w}
-		height={topSvgs[topSvgCounter].h}
-		viewBox="0 0 {topSvgs[topSvgCounter].w} {topSvgs[topSvgCounter].h}"
-		class="top-svg"
-		xmlns="http://www.w3.org/2000/svg"
-	>
-		<path d={topSvgs[topSvgCounter].d} />
-	</svg>
+	{#if topSvg !== null}
+		<svg
+			width={topSvgs[topSvgCounter].w}
+			height={topSvgs[topSvgCounter].h}
+			viewBox="0 0 {topSvgs[topSvgCounter].w} {topSvgs[topSvgCounter].h}"
+			class="top-svg"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path d={topSvgs[topSvgCounter].d} />
+		</svg>
+	{/if}
 
 	<div class="heading-wrapper">
 		<h1>{heading}</h1>

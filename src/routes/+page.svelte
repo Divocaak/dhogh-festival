@@ -3,20 +3,14 @@
 	import langs from '$lib/localization.json';
 	import InfoBlock from '$lib/InfoBlock.svelte';
 	import ContentBlock from '$lib/ContentBlock.svelte';
-	import ArtistBlock from '$lib/ArtistBlock.svelte';
 	import ButtonLink from '$lib/ButtonLink.svelte';
 	import BgImageContentBlock from '$lib/BgImageContentBlock.svelte';
 	import TicketCard from '$lib/TicketCard.svelte';
 	import Footer from '$lib/Footer.svelte';
+	import ProgrammeCard from '$lib/ProgrammeCard.svelte';
+	import SupportArtist from '$lib/SupportArtist.svelte';
 
-	const eventLink = 'https://fb.me/e/gImSXNvsV';
-
-	const ticketImgs = ['001.jpg', '002.jpg', '003.jpg'];
 	const ticketColors = ['var(--red)', 'var(--violet)', 'var(--green)'];
-
-	const secondWaveActive = false;
-
-	/* TODO glitch fx (cahnge svgs) */
 </script>
 
 <BgImageContentBlock imagePath="imgs/artists/veitb.jpg">
@@ -75,44 +69,30 @@
 		<path d="M-85.2024 -174L-190 -174L-190 -128.478L-85.2024 -128.478L-85.2024 -174Z" />
 	</svg>
 	<InfoBlock />
-	<svg
-		width="1512"
-		height="304"
-		viewBox="0 0 1512 304"
-		xmlns="http://www.w3.org/2000/svg"
-		class="landing-svg"
-	>
-		<path d="M648.516 189.914L739.984 189.914L739.984 140.127L648.516 140.127L648.516 189.914Z" />
-		<path d="M216.03 69.3092L475.346 69.3092L475.346 41.438L216.03 41.438L216.03 69.3092Z" />
-		<path d="M164.822 111.049L216.232 111.049L216.232 69.4434L164.822 69.4434L164.822 111.049Z" />
-		<path d="M135.155 139.617L164.839 139.617L164.839 111.049L135.155 111.049L135.155 139.617Z" />
-		<path d="M44.025 111.049L135.138 111.049L135.138 41.8137L44.025 41.8137L44.025 111.049Z" />
-		<path
-			d="M-7.41935 41.8137L44.025 41.8137L44.0249 0.0474576L-7.41935 0.047457L-7.41935 41.8137Z"
-		/>
-		<path
-			d="M-99.6643 66.1173L-7.40252 66.1173L-7.40252 41.8407L-99.6643 41.8407L-99.6643 66.1173Z"
-		/>
-		<path d="M-189.865 109.52L-99.6474 109.52L-99.6474 66.1173L-189.865 66.1173L-189.865 109.52Z" />
-		<path d="M-99.7993 181.84L135.374 181.84L135.374 139.322L-99.7993 139.322L-99.7993 181.84Z" />
-		<path d="M-190 210.703L-99.7994 210.703L-99.7994 181.813L-190 181.813L-190 210.703Z" />
-		<path d="M216.283 183.583L245.5 183.583L245.5 110.593L216.283 110.593L216.283 183.583Z" />
-		<path d="M388.254 140.127L648.516 140.127L648.516 111.156L388.254 111.156L388.254 140.127Z" />
-		<path d="M388.423 252.148L478.218 252.148L478.218 180.31L388.423 180.31L388.423 252.148Z" />
-		<path d="M309.5 180.284L388.254 180.284L388.254 140.1L309.5 140.1L309.5 180.284Z" />
-		<path d="M1336.64 258.452L1597.19 258.452L1597.19 211.776L1336.64 211.776L1336.64 258.452Z" />
-		<path d="M1139.95 258.479L1243.07 258.479L1243.07 181.572L1139.95 181.572L1139.95 258.479Z" />
-		<path d="M950.255 129.88L1243.06 129.88L1243.06 95.9198L950.255 95.9198L950.255 129.88Z" />
-		<path d="M1243.06 181.571L1303.37 181.571L1303.37 129.88L1243.06 129.88L1243.06 181.571Z" />
-		<path d="M1303.39 211.803L1336.64 211.803L1336.64 181.598L1303.39 181.598L1303.39 211.803Z" />
-		<path d="M1336.64 181.571L1436.57 181.571L1436.57 97.3949L1336.64 97.3949L1336.64 181.571Z" />
-		<path d="M1436.6 97.3682L1496.21 97.3682L1496.21 57.3725L1436.6 57.3725L1436.6 97.3682Z" />
-		<path d="M1496.21 125.212L1597.19 125.212L1597.19 97.3949L1496.21 97.3949L1496.21 125.212Z" />
-		<path d="M1597.19 181.571L1701.98 181.571L1701.98 125.212L1597.19 125.212L1597.19 181.571Z" />
-		<path d="M1597.2 304L1702 304L1702 258.478L1597.2 258.478L1597.2 304Z" />
-	</svg>
 </BgImageContentBlock>
 
+<ContentBlock backgroundColor="var(--grey)" heading={langs[$lang].artists.label}>
+	<div class="artists-wrapper">
+		{#each langs[$lang].artists.headliners as artist}
+			<ProgrammeCard cardName={artist.name} imgPath={artist.img} desc={artist.desc} />
+		{/each}
+		{#each langs[$lang].artists.supporters as artist}
+			<SupportArtist name={artist} />
+		{/each}
+	</div>
+</ContentBlock>
+<ContentBlock
+	backgroundColor="var(--grey)"
+	heading={langs[$lang].education.label}
+	headingSvg="1"
+	topSvg={null}
+>
+	<div class="artists-wrapper">
+		{#each langs[$lang].education.events as event}
+			<ProgrammeCard cardName={event.name} imgPath={event.img} desc={event.desc} />
+		{/each}
+	</div>
+</ContentBlock>
 <ContentBlock backgroundColor="var(--green)" heading="festival">
 	<div class="festival-content-wrapper">
 		<p>{langs[$lang].festival[0]}</p>
@@ -131,7 +111,6 @@
 		{/each}
 	</div>
 </ContentBlock>
-
 <ContentBlock
 	backgroundColor="var(--blue)"
 	heading="program"
@@ -139,13 +118,13 @@
 	headingBgClr="var(--shadow)"
 	headingSvg="1"
 >
-	<div class="tickets-wrapper">
+	<div class="tickets-wrapper" id="tickets">
 		{#each langs[$lang].tickets.tickets as ticket, i}
 			<TicketCard
 				leadTextColor={ticketColors[i]}
 				cardName={ticket.label}
 				subheading={ticket.subheading}
-				imgPath={ticketImgs[i]}
+				imgPath={ticket.img}
 				desc={ticket.desc}
 				texts={ticket.texts}
 				price={ticket.price}
@@ -160,10 +139,6 @@
 		position: absolute;
 		fill: var(--green);
 		width: 100%;
-	}
-
-	.landing-svg:last-of-type {
-		bottom: 0;
 	}
 
 	.festival-content-wrapper {
@@ -210,6 +185,14 @@
 		margin: 0;
 	}
 
+	.artists-wrapper {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+
+		gap: 5rem 2rem;
+		padding: calc(1.5 * var(--general-px));
+	}
+
 	.tickets-wrapper {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -251,13 +234,25 @@
 		}
 
 		.value {
-			width: 100%;
+			width: calc(100% - 6rem);
+			padding: 0 3rem;
 		}
 
 		.tickets-wrapper {
 			padding: 0;
 			display: flex;
 			flex-direction: column;
+		}
+
+		.artists-wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 0;
+		}
+
+		.artists-wrapper:last-of-type {
+			padding-bottom: 10rem;
 		}
 	}
 </style>

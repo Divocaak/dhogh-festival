@@ -23,7 +23,8 @@
 	}
 
 	:global(:root) {
-		--black: #000000;
+		--black: #1D1D1B;
+		--grey: #353535;
 		--shadow: #dadada;
 		--disabled: #c3c3c3;
 		--red: #e73c30;
@@ -31,6 +32,8 @@
 		--green: #52774f;
 		--peach: #f9c4aa;
 		--violet: #8e79b6;
+
+		--card-border-radius: 1rem;
 
 		--general-px: 5rem;
 
@@ -87,6 +90,10 @@
 	:global(body) {
 		margin: 0;
 		background-color: var(--black);
+	}
+	
+	:global(html){
+		scroll-behavior: smooth;
 	}
 
 	:global(h1) {

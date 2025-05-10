@@ -34,7 +34,6 @@
 		bottom: 0;
 		height: 100%;
 		margin-top: 7rem;
-		background-color: var(--black);
 	}
 
 	@media (max-width: 1200px) {
