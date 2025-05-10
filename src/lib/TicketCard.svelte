@@ -152,6 +152,14 @@
 	}
 
 	@media (max-width: 1200px) {
+		.texts-wrapper h1 {
+		font-size: var(--fs-48);
+	}
+
+	.texts-wrapper p {
+		font-size: var(--fs-14);
+	}
+
 		.ticket-wrapper {
 			width: calc(100% - 3rem);
 			padding: 0 1.5rem;

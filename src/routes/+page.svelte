@@ -71,7 +71,7 @@
 	<InfoBlock />
 </BgImageContentBlock>
 
-<ContentBlock backgroundColor="var(--grey)" heading={langs[$lang].artists.label}>
+<!-- <ContentBlock backgroundColor="var(--grey)" heading={langs[$lang].artists.label}>
 	<div class="artists-wrapper">
 		{#each langs[$lang].artists.headliners as artist}
 			<ProgrammeCard cardName={artist.name} imgPath={artist.img} desc={artist.desc} />
@@ -92,7 +92,7 @@
 			<ProgrammeCard cardName={event.name} imgPath={event.img} desc={event.desc} />
 		{/each}
 	</div>
-</ContentBlock>
+</ContentBlock> -->
 <ContentBlock backgroundColor="var(--green)" heading="festival">
 	<div class="festival-content-wrapper">
 		<p>{langs[$lang].festival[0]}</p>
@@ -113,7 +113,7 @@
 </ContentBlock>
 <ContentBlock
 	backgroundColor="var(--blue)"
-	heading="program"
+	heading="{langs[$lang].tickets.label}"
 	headingClr="var(--black)"
 	headingBgClr="var(--shadow)"
 	headingSvg="1"
