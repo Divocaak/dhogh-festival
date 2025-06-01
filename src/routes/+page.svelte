@@ -1,5 +1,5 @@
 <script>
-	import { lang } from '$lib/LangStore.js';
+	import { lang } from '$lib/stores/LangStore.js';
 	import langs from '$lib/localization.json';
 	import InfoBlock from '$lib/InfoBlock.svelte';
 	import ContentBlock from '$lib/ContentBlock.svelte';

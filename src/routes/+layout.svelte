@@ -1,4 +1,9 @@
+<script>
+	import Analytics from '$lib/Analytics.svelte';
+</script>
+
 <slot></slot>
+<Analytics />
 
 <style>
 	@font-face {
