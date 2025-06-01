@@ -5,29 +5,24 @@
 	import FlippingCard from './FlippingCard.svelte';
 
 	export let leadTextColor = 'var(--shadow)';
-	export let cardName = 'card name';
-	export let subheading = 'subheading';
-	export let imgPath = 'raver.jpg';
-	export let desc = null;
-	export let texts = [];
-	export let price = '0';
+	export let ticket;
 </script>
 
 <div class="ticket-wrapper" style="--lead-text-color:{leadTextColor}">
 	<FlippingCard>
 		<div slot="inner" class="inner">
 			<div class="circle"></div>
-			<div class="bg-image" style="background-image: url('/imgs/tickets/{imgPath}');"></div>
+			<div class="bg-image" style="background-image: url('/imgs/tickets/{ticket.img}');"></div>
 			<div class="texts-wrapper">
-				<h1>{cardName}</h1>
-				<p class="pp-supply">({subheading})</p>
+				<h1>{ticket.label}</h1>
+				<p class="pp-supply">({ticket.subheading})</p>
 			</div>
 		</div>
 		<div slot="backface" class="backface">
 			<div class="circle"></div>
 			<div class="ticket-detail">
-				{#if desc}<p class="pp-supply desc">{desc}</p>{/if}
-				{#each texts as programme}
+				{#if ticket.desc}<p class="pp-supply desc">{ticket.desc}</p>{/if}
+				{#each ticket.texts as programme}
 					<div class="programme-day">
 						<h3>{programme.label}</h3>
 						{#each programme.texts as text}
@@ -39,13 +34,14 @@
 		</div>
 	</FlippingCard>
 	<div class="cta">
-		<h2>{price}</h2>
+		<h2>{ticket.price}</h2>
 		<ButtonLink
 			label={langs[$lang].tickets.button}
 			href="https://goout.net/cs/dhogh-festival-2025/szjdaux/"
 			marginAuto={false}
 		/>
 	</div>
+	<p class="ticket-text">{ticket.text}</p>
 </div>
 
 <style>
@@ -68,7 +64,7 @@
 	}
 
 	.cta {
-		padding-top: 1.5rem;
+		padding: 2rem 0;
 	}
 
 	.cta h2 {
@@ -151,14 +147,20 @@
 		line-height: 1.2rem;
 	}
 
-	@media (max-width: 1200px) {
-		.texts-wrapper h1 {
-		font-size: var(--fs-48);
+	.ticket-text {
+		color: var(--shadow);
+		font-size: var(--fs-20);
+		width: 90%;
 	}
 
-	.texts-wrapper p {
-		font-size: var(--fs-14);
-	}
+	@media (max-width: 1200px) {
+		.texts-wrapper h1 {
+			font-size: var(--fs-48);
+		}
+
+		.texts-wrapper p {
+			font-size: var(--fs-14);
+		}
 
 		.ticket-wrapper {
 			width: calc(100% - 3rem);

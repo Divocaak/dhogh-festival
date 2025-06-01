@@ -2,7 +2,7 @@
 	import { onDestroy } from 'svelte';
 
 	export let backgroundColor = 'var(--black)';
-	export let heading;
+	export let heading = null;
 	export let headingSvg = 0;
 	export let headingClr = 'var(--shadow)';
 	export let headingBgClr = 'var(--black)';
@@ -43,23 +43,6 @@
 			d: 'M1512 200L0 200L0 55.4273L87.5 55.4273V22.1709L245 22.1709V92.8407L307.5 92.8407V39.7229L361 39.7229V0L407.5 0V66.9746H476.5V22.1709L576.5 22.1709V55.4273L650.5 55.4273V33L727 33V55.4273H761V113H864.5V92.8407L908 92.8407V27.4376L1001.5 27.4376V8.5L1113 8.5V66.9746L1250.5 66.9746V8.5L1388 8.5V92.8407L1501.5 92.8407H1512V200Z'
 		}
 	];
-
-	let headingSvgCounter = headingSvg;
-	/* const headingSvgInterval = setInterval(() => {
-		headingSvgCounter = (headingSvgCounter + 1) % svgs.length;
-	}, 1000); */
-
-	let topSvgCounter = topSvg ?? 0;
-	if (topSvg !== null) {
-		const topSvgInterval = setInterval(() => {
-			topSvgCounter = (topSvgCounter + 1) % topSvgs.length;
-		}, 1000);
-	}
-
-	onDestroy(() => {
-		/* clearInterval(headingSvgInterval); */
-		if (topSvg) clearInterval(topSvgInterval);
-	});
 </script>
 
 <div
@@ -68,27 +51,29 @@
 >
 	{#if topSvg !== null}
 		<svg
-			width={topSvgs[topSvgCounter].w}
-			height={topSvgs[topSvgCounter].h}
-			viewBox="0 0 {topSvgs[topSvgCounter].w} {topSvgs[topSvgCounter].h}"
+			width={topSvgs[topSvg].w}
+			height={topSvgs[topSvg].h}
+			viewBox="0 0 {topSvgs[topSvg].w} {topSvgs[topSvg].h}"
 			class="top-svg"
 			xmlns="http://www.w3.org/2000/svg"
 		>
-			<path d={topSvgs[topSvgCounter].d} />
+			<path d={topSvgs[topSvg].d} />
 		</svg>
 	{/if}
 
-	<div class="heading-wrapper">
-		<h1>{heading}</h1>
-		<svg
-			width={svgs[headingSvgCounter].w}
-			height={svgs[headingSvgCounter].h}
-			viewBox="0 0 {svgs[headingSvgCounter].w} {svgs[headingSvgCounter].h}"
-			xmlns="http://www.w3.org/2000/svg"
-		>
-			<path d={svgs[headingSvgCounter].d} />
-		</svg>
-	</div>
+	{#if heading}
+		<div class="heading-wrapper">
+			<h1>{heading}</h1>
+			<svg
+				width={svgs[headingSvg].w}
+				height={svgs[headingSvg].h}
+				viewBox="0 0 {svgs[headingSvg].w} {svgs[headingSvg].h}"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path d={svgs[headingSvg].d} />
+			</svg>
+		</div>
+	{/if}
 
 	<slot></slot>
 </div>
@@ -103,13 +88,14 @@
 	.wrapper {
 		position: relative;
 		background-color: var(--bg-color);
-		min-height: 100vh;
+		padding-bottom: 150px;
 	}
 
 	.heading-wrapper {
 		position: relative;
 		width: 100%;
 		height: 10rem;
+		margin-bottom: 100px;
 	}
 
 	.heading-wrapper h1,
@@ -134,7 +120,7 @@
 
 	.top-svg {
 		position: absolute;
-		top: -150px;
+		top: -193px;
 		width: 100%;
 		fill: var(--bg-color);
 	}

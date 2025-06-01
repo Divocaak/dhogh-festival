@@ -1,12 +1,38 @@
 {
     "cs": {
-        "landing": {
-            "texts": [
-                "3 dny elektronické hudby",
-                "15 interpretů",
-                "+ workshopy a diskuze"
-            ]
-        },
+        "programme": [
+            {
+                "label": "pá/20_06",
+                "artists": [
+                    "TIGERHEAD",
+                    "ALEX_WILCOX",
+                    "WNCHNZ",
+                    "Surrealita",
+                    "Dj_Alyaz",
+                    "Mor4m",
+                    "VEIT B",
+                    "tvyks"
+                ]
+            },
+            {
+                "label": "čt/19_06",
+                "artists": [
+                    "Jadran",
+                    "mista_humix",
+                    "BIOTOP",
+                    "Tom_Holič",
+                    "Synth_Library_Prague"
+                ]
+            },
+            {
+                "label": "st/18_06",
+                "artists": [
+                    "body_bass",
+                    "antonin_padrta",
+                    "dj_workshop"
+                ]
+            }
+        ],
         "festival": [
             "Festival propojuje taneční hudbu, umění, filozofii a komunitního ducha undergroundové scény. Poskytuje nejen kulturní zážitek, ale i prostor pro hlubší reflexi nad významem elektronické hudby a jejího vlivu na městský noční život.",
             "Cílem festivalu je také přiblížit elektronickou hudbu a s ní spojenou kulturu širší veřejnosti a mladé generaci. Rozšířit komunitu a podnítit zástupce mladé generace k tvorbě hudby nebo DJingu, a tak vytvořit dlouhodobou kontinuitu."
@@ -28,85 +54,9 @@
                 }
             ]
         },
-        "artists": {
-            "label": "umělci",
-            "headliners": [
-                {
-                    "name": "tigerhead",
-                    "desc": "Cílem festivalu je také přiblížit elektronickou hudbu",
-                    "img": "veitb.jpg"
-                },
-                {
-                    "name": "alex_wilcox",
-                    "desc": "Cílem festivalu je také přiblížit elektronickou hudbu",
-                    "img": "veitb.jpg"
-                },
-                {
-                    "name": "wnchnz",
-                    "desc": "Cílem festivalu je také přiblížit elektronickou hudbu",
-                    "img": "veitb.jpg"
-                },
-                {
-                    "name": "dj_alyaz",
-                    "desc": "Cílem festivalu je také přiblížit elektronickou hudbu",
-                    "img": "veitb.jpg"
-                },
-                {
-                    "name": "surealita",
-                    "desc": "Cílem festivalu je také přiblížit elektronickou hudbu",
-                    "img": "veitb.jpg"
-                },
-                {
-                    "name": "jadran",
-                    "desc": "Cílem festivalu je také přiblížit elektronickou hudbu",
-                    "img": "veitb.jpg"
-                },
-                {
-                    "name": "mor4m",
-                    "desc": "Cílem festivalu je také přiblížit elektronickou hudbu",
-                    "img": "veitb.jpg"
-                },
-                {
-                    "name": "artist_1",
-                    "desc": "Cílem festivalu je také přiblížit elektronickou hudbu",
-                    "img": "veitb.jpg"
-                }
-            ],
-            "supporters": [
-                "veit_b",
-                "body_bass",
-                "edward traumaxowski"
-            ]
-        },
-        "education": {
-            "label": "education",
-            "events": [
-                {
-                    "name": "dj_workshop",
-                    "desc": "lorem ipsum",
-                    "img": "veitb.jpg"
-                },
-                {
-                    "name": "diskuze",
-                    "desc": "workshop",
-                    "img": "veitb.jpg"
-                },
-                {
-                    "name": "workshop",
-                    "desc": "lorem ipsum",
-                    "img": "veitb.jpg"
-                },
-                {
-                    "name": "diskuze",
-                    "desc": "lorem ipsum",
-                    "img": "veitb.jpg"
-                }
-            ]
-        },
         "tickets": {
             "label": "lístky",
             "button": "koupit",
-            "warning": "lístky platné pouze nákupem v síti goout",
             "tickets": [
                 {
                     "label": "true_raver",
@@ -114,7 +64,7 @@
                     "desc": "vstupenka na všechny festivalové dny včetně páteční afterparty",
                     "texts": [
                         {
-                            "label": "18_06 středa/wednesday",
+                            "label": "18_06 středa",
                             "texts": [
                                 "local_djs",
                                 "ableton_workshop",
@@ -122,14 +72,14 @@
                             ]
                         },
                         {
-                            "label": "19_06 čtvrtek/thursday",
+                            "label": "19_06 čtvrtek",
                             "texts": [
                                 "live_sets",
                                 "synth_workshop"
                             ]
                         },
                         {
-                            "label": "20_06 pátek/friday",
+                            "label": "20_06 pátek",
                             "texts": [
                                 "open_air(17-22)"
                             ],
@@ -137,7 +87,8 @@
                         }
                     ],
                     "price": "500,-",
-                    "img": "001.jpg"
+                    "img": "001.jpg",
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci "
                 },
                 {
                     "label": "raver",
@@ -145,21 +96,22 @@
                     "desc": "vstupenka na páteční program na hlavní stage, kde vystoupí oba headlineři",
                     "texts": [
                         {
-                            "label": "20_06 pátek/friday",
+                            "label": "20_06 pátek",
                             "texts": [
                                 "open_air(17-22)"
                             ]
                         }
                     ],
                     "price": "300,-",
-                    "img": "002.jpg"
+                    "img": "002.jpg",
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci "
                 },
                 {
                     "label": "wormuper",
                     "subheading": "WED/THU_for_education&community",
                     "texts": [
                         {
-                            "label": "18_06 středa/wednesday",
+                            "label": "18_06 středa",
                             "texts": [
                                 "local_djs",
                                 "ableton_workshop",
@@ -167,7 +119,7 @@
                             ]
                         },
                         {
-                            "label": "19_06 čtvrtek/thursday",
+                            "label": "19_06 čtvrtek",
                             "texts": [
                                 "live_sets",
                                 "synth_workshop"
@@ -175,7 +127,142 @@
                         }
                     ],
                     "price": "100-200,-",
-                    "img": "003.jpg"
+                    "img": "003.jpg",
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci "
+                }
+            ]
+        }
+    },
+    "en": {
+        "programme": [
+            {
+                "label": "fri/20_06",
+                "artists": [
+                    "TIGERHEAD",
+                    "ALEX_WILCOX",
+                    "WNCHNZ",
+                    "Surrealita",
+                    "Dj_Alyaz",
+                    "Mor4m",
+                    "VEIT B",
+                    "tvyks"
+                ]
+            },
+            {
+                "label": "thu/19_06",
+                "artists": [
+                    "Jadran",
+                    "mista_humix",
+                    "BIOTOP",
+                    "Tom_Holic",
+                    "Synth_Library_Prague"
+                ]
+            },
+            {
+                "label": "wed/18_06",
+                "artists": [
+                    "body_bass",
+                    "antonin_padrta",
+                    "dj_workshop"
+                ]
+            }
+        ],
+        "festival": [
+            "The festival fuses dance music, art, philosophy, and the community spirit of the underground scene. It's not just a cultural trip - it's a space for deeper reflection on the meaning of electronic music and how it shapes the pulse of the city's nightlife.",
+            "The mission is to open up the world of electronic music and its culture to a wider crowd, especially the next generation. It's about growing the scene, sparking inspiration, and getting young heads into producing or DJing - keeping the vibe alive and the future flowing."
+        ],
+        "values": {
+            "label": "our values",
+            "values": [
+                {
+                    "label": "Creative scenography",
+                    "desc": "Every club night brings a fresh visual concept — reimagining the space to give ravers a new kind of trip. DIY and re-use are key: most props are crafted from repurposed materials, giving forgotten stuff a second life on the dancefloor."
+                },
+                {
+                    "label": "Safe space",
+                    "desc": "This isn't just a venue — it's a safe zone built on respect, openness, and real connection. Everyone who steps in is part of the community, no matter their background, identity, or story."
+                },
+                {
+                    "label": "Community, connection",
+                    "desc": "It's not just about the beats — it's about the people. The collective builds a space where artists, organizers, and ravers connect, inspire, and support each other. Real vibes, real unity."
+                }
+            ]
+        },
+        "tickets": {
+            "label": "tickets",
+            "button": "buy",
+            "tickets": [
+                {
+                    "label": "true_raver",
+                    "subheading": "FULL_FESTIVAL_PASS",
+                    "desc": "A full pass for all festival days — including the Friday afterparty",
+                    "texts": [
+                        {
+                            "label": "18_06 wednesday",
+                            "texts": [
+                                "local_djs",
+                                "ableton_workshop",
+                                "dj_workshop"
+                            ]
+                        },
+                        {
+                            "label": "19_06 thursday",
+                            "texts": [
+                                "live_sets",
+                                "synth_workshop"
+                            ]
+                        },
+                        {
+                            "label": "20_06 friday",
+                            "texts": [
+                                "open_air(17-22)"
+                            ],
+                            "afterpartyWarning": "Limited capacity"
+                        }
+                    ],
+                    "price": "500,-",
+                    "img": "001.jpg",
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci "
+                },
+                {
+                    "label": "raver",
+                    "subheading": "FRIDAY_OPEN_AIR",
+                    "desc": "Friday main stage ticket - both headliners, one massive night",
+                    "texts": [
+                        {
+                            "label": "20_06 friday",
+                            "texts": [
+                                "open_air(17-22)"
+                            ]
+                        }
+                    ],
+                    "price": "300,-",
+                    "img": "002.jpg",
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci "
+                },
+                {
+                    "label": "wormuper",
+                    "subheading": "WED/THU_for_education&community",
+                    "texts": [
+                        {
+                            "label": "18_06 wednesday",
+                            "texts": [
+                                "local_djs",
+                                "ableton_workshop",
+                                "dj_workshop"
+                            ]
+                        },
+                        {
+                            "label": "19_06 thursday",
+                            "texts": [
+                                "live_sets",
+                                "synth_workshop"
+                            ]
+                        }
+                    ],
+                    "price": "100-200,-",
+                    "img": "003.jpg",
+                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci "
                 }
             ]
         }

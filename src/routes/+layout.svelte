@@ -36,6 +36,7 @@
 		--card-border-radius: 1rem;
 
 		--general-px: 5rem;
+		--general-px-sm: 2rem;
 
 		/* vw = px value / 19.2 */
 		/* rem = px value / 16 */
@@ -89,7 +90,7 @@
 
 	:global(body) {
 		margin: 0;
-		background-color: var(--black);
+		background-color: var(--grey);
 	}
 	
 	:global(html){
