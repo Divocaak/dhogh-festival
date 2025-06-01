@@ -1,362 +1,373 @@
 <script>
-	import { lang } from '$lib/LangStore.js';
+	import { lang } from '$lib/stores/LangStore.js';
 	import langs from '$lib/localization.json';
 	import InfoBlock from '$lib/InfoBlock.svelte';
 	import ContentBlock from '$lib/ContentBlock.svelte';
-	import Heading from '$lib/Heading.svelte';
-	import ArtistBlock from '$lib/ArtistBlock.svelte';
 	import ButtonLink from '$lib/ButtonLink.svelte';
-	import BgImageContentBlock from '$lib/BgImageContentBlock.svelte';
-	import TicketPanel from '$lib/TicketPanel.svelte';
+	import TicketCard from '$lib/TicketCard.svelte';
+	import Footer from '$lib/Footer.svelte';
+	import Artist from '$lib/Artist.svelte';
+	import ProgrammeDay from '$lib/ProgrammeDay.svelte';
+	import Value from '$lib/Value.svelte';
+	import Button from '$lib/Button.svelte';
 
-
-	const eventLink = 'https://fb.me/e/gImSXNvsV';
-
-	const ticketImgs = [
-		'trueraver.jpg',
-		'raver.jpg',
-		'artists/humiks.jpg',
-		'artists/alex.jpg',
-		'artists/veitb.jpg'
-	];
-	const ticketLinks = [
-		['https://fb.me/e/gImSXNvsV', 'https://fb.me/e/gImSXNvsV'],
-		['https://fb.me/e/gImSXNvsV', 'https://fb.me/e/gImSXNvsV'],
-		'https://fb.me/e/gImSXNvsV',
-		'https://fb.me/e/gImSXNvsV',
-		'https://fb.me/e/gImSXNvsV'
-	];
-	const secondWaveActive = false;
+	const ticketColors = ['var(--red)', 'var(--violet)', 'var(--green)'];
 </script>
 
-<BgImageContentBlock imagePath="imgs/artists/veitb.jpg">
+<svelte:head>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Festival",
+			"name": "DHOGH Festival 2025",
+			"startDate": "2025-06-18",
+			"endDate": "2025-06-20",
+			"location": {
+				"@type": "Place",
+				"name": "Žižkárna",
+				"url": "https://zizkarna.cz",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "Žižkova tř. 28",
+					"addressLocality": "České Budějovice",
+					"addressCountry": "CZ"
+				}
+			},
+			"description": "Festival propojuje taneční hudbu, umění, filozofii a komunitního ducha undergroundové scény. Poskytuje nejen kulturní zážitek, ale i prostor pro hlubší reflexi nad významem elektronické hudby a jejího vlivu na městský noční život.",
+			"eventSchedule": [
+				{
+					"@type": "Event",
+					"name": "Středa - Local DJs, Ableton Workshop, DJ Workshop",
+					"startDate": "2025-06-18",
+					"location": {
+						"@type": "Place",
+						"name": "Žižkárna",
+						"url": "https://zizkarna.cz",
+						"address": {
+							"@type": "PostalAddress",
+							"streetAddress": "Žižkova tř. 28",
+							"addressLocality": "České Budějovice",
+							"addressCountry": "CZ"
+						}
+					},
+					"performer": [
+						{
+							"@type": "MusicGroup",
+							"name": "body_bass"
+						},
+						{
+							"@type": "Person",
+							"name": "antonin_padrta"
+						},
+						{
+							"@type": "Event",
+							"name": "DJ Workshop"
+						}
+					]
+				},
+				{
+					"@type": "Event",
+					"name": "Čtvrtek - Live Sets, Synth Workshop",
+					"startDate": "2025-06-19",
+					"location": {
+						"@type": "Place",
+						"name": "Žižkárna",
+						"url": "https://zizkarna.cz",
+						"address": {
+							"@type": "PostalAddress",
+							"streetAddress": "Žižkova tř. 28",
+							"addressLocality": "České Budějovice",
+							"addressCountry": "CZ"
+						}
+					},
+					"performer": [
+						{
+							"@type": "MusicGroup",
+							"name": "Jadran"
+						},
+						{
+							"@type": "Person",
+							"name": "mista_humix"
+						},
+						{
+							"@type": "MusicGroup",
+							"name": "BIOTOP"
+						},
+						{
+							"@type": "Person",
+							"name": "Tom_Holič"
+						},
+						{
+							"@type": "Organization",
+							"name": "Synth Library Prague"
+						}
+					]
+				},
+				{
+					"@type": "Event",
+					"name": "Pátek - Open Air (17:00-22:00)",
+					"startDate": "2025-06-20T17:00",
+					"endDate": "2025-06-20T22:00",
+					"location": {
+						"@type": "Place",
+						"name": "Žižkárna",
+						"url": "https://zizkarna.cz",
+						"address": {
+							"@type": "PostalAddress",
+							"streetAddress": "Žižkova tř. 28",
+							"addressLocality": "České Budějovice",
+							"addressCountry": "CZ"
+						}
+					},
+					"performer": [
+						{
+							"@type": "Person",
+							"name": "TIGERHEAD",
+							"sameAs": "https://ra.co/dj/tigerhead"
+						},
+						{
+							"@type": "Person",
+							"name": "ALEX_WILCOX",
+							"sameAs": "https://www.discogs.com/artist/8125675-Alex-Wilcox"
+						},
+						{
+							"@type": "Person",
+							"name": "WNCHNZ"
+						},
+						{
+							"@type": "Person",
+							"name": "Surrealita",
+							"sameAs": "https://ra.co/dj/surrealita"
+						},
+						{
+							"@type": "Person",
+							"name": "Dj_Alyaz",
+							"sameAs": "https://ra.co/dj/djalyaz"
+						},
+						{
+							"@type": "Person",
+							"name": "Mor4m"
+						},
+						{
+							"@type": "Person",
+							"name": "VEIT B",
+							"sameAs": "https://soundcloud.com/veit-b"
+						},
+						{
+							"@type": "Person",
+							"name": "tvyks"
+						}
+					]
+				}
+			],
+			"offers": [
+				{
+					"@type": "Offer",
+					"name": "Full Festival Pass",
+					"description": "Vstupenka na všechny festivalové dny včetně páteční afterparty",
+					"price": "500",
+					"priceCurrency": "CZK",
+					"availability": "https://schema.org/InStock",
+					"url": "https://goout.net/cs/dhogh-festival-2025/szjdaux/"
+				},
+				{
+					"@type": "Offer",
+					"name": "Friday Open Air",
+					"description": "Vstupenka na páteční program na hlavní stage, kde vystoupí oba headlineři",
+					"price": "300",
+					"priceCurrency": "CZK",
+					"availability": "https://schema.org/InStock",
+					"url": "https://goout.net/cs/dhogh-festival-2025/szjdaux/"
+				},
+				{
+					"@type": "Offer",
+					"name": "Wormuper (Středa/Čtvrtek)",
+					"description": "Vstupenka na středeční a čtvrteční program zaměřený na vzdělávání a komunitu",
+					"price": "100-200",
+					"priceCurrency": "CZK",
+					"availability": "https://schema.org/InStock",
+					"url": "https://goout.net/cs/dhogh-festival-2025/szjdaux/"
+				}
+			],
+			"organizer": {
+				"@type": "Organization",
+				"name": "DHOGH Team",
+				"email": "dhoghteam@gmail.com",
+				"url": "https://dhogh.com"
+			},
+			"image": [
+				"https://dhogh.com/imgs/artists/alex.jpg",
+				"https://dhogh.com/imgs/artists/tigerhead.jpg",
+				"https://dhogh.com/imgs/artists/wnchnz.jpg",
+				"https://dhogh.com/imgs/values.jpg"
+			],
+			"url": "https://dhogh.com"
+		}
+	</script>
+</svelte:head>
+
+<div class="lang-btn-wrapper">
+	<Button
+		label={$lang === 'cs' ? 'en' : 'cz'}
+		onclick={() => lang.set($lang === 'cs' ? 'en' : 'cs')}
+		marginAuto={false}
+	/>
+</div>
+
+<ContentBlock backgroundColor="var(--grey)" topSvg={null}>
 	<InfoBlock />
-	<div class="landing">
-		<div class="content-wrapper">
-			{#each langs[$lang].landing.texts as text}
-				<h1>{text}</h1>
+	<div class="artists-wrapper">
+		<Artist name="tigerhead" imgPath="tigerhead.jpg"></Artist>
+		<Artist name="alex_wilcox" imgPath="alex.jpg"></Artist>
+		<Artist name="wnchnz" imgPath="wnchnz.jpg"></Artist>
+	</div>
+	<div class="programme-wrapper">
+		<div class="event-btn-wrapper">
+			<ButtonLink href="https://fb.me/e/gImSXNvsV" label="event" isEvent={true} />
+		</div>
+		<div class="programme">
+			{#each langs[$lang].programme as day, i}
+				<ProgrammeDay label={day.label} artists={day.artists} color={ticketColors[i]} />
 			{/each}
-			<div class="buttons-wrapper">
-				<ButtonLink
-					link={eventLink}
-					label="event"
-					bgColor="var(--shadow)"
-					txtColor="var(--black)"
-					marginAuto={false}
-				/>
-				<ButtonLink
-					link=""
-					label="tickets"
-					bgColor="var(--shadow)"
-					txtColor="var(--black)"
-					marginAuto={false}
-				/>
-			</div>
 		</div>
 	</div>
-</BgImageContentBlock>
+</ContentBlock>
 
-<ContentBlock backgroundColor="var(--blue)">
-	<Heading heading="festival" />
-	<div class="festival-content-wrapper">
-		<div class="texts">
+<ContentBlock backgroundColor="var(--green)" heading="festival">
+	<div class="festival-wrapper">
+		<img src="/imgs/values.jpg" alt="about festival" />
+		<div class="festival-texts-wrapper">
 			{#each langs[$lang].festival as text}
 				<p>{text}</p>
 			{/each}
 		</div>
-		<div class="img-container"></div>
 	</div>
-</ContentBlock>
-
-<BgImageContentBlock imagePath="imgs/values.jpg">
-	<div class="values">
-		<h1>{langs[$lang].values.label}</h1>
+	<div class="values-wrapper">
 		{#each langs[$lang].values.values as value}
-			<h2>{value.label}</h2>
-			<p>{value.desc}</p>
+			<Value {value} />
 		{/each}
-	</div>
-</BgImageContentBlock>
-
-<ContentBlock backgroundColor="var(--green)">
-	<Heading heading={langs[$lang].programme.label} />
-	<div class="program-main-wrapper">
-		<ArtistBlock name="Tigerhead (DE)" imgPath="veitb.jpg" />
-		<ArtistBlock name="Alex Wilcox (US)" imgPath="alex.jpg" />
-		<ArtistBlock name="Veit B" imgPath="veitb.jpg" />
-		<ArtistBlock name="Mista Humiks" imgPath="humiks.jpg" />
-		<ArtistBlock name="Alex Wilcox (US)" imgPath="alex.jpg" />
-		<ArtistBlock name="Tigerhead (DE)" imgPath="veitb.jpg" />
-		<ArtistBlock name="Mista Humiks" imgPath="humiks.jpg" />
-		<ArtistBlock name="Veit B" imgPath="veitb.jpg" />
-	</div>
-	<div class="program-smaller-wrapper">
-		<div class="wrapper">
-			<h2>tigerhead (de)</h2>
-			<h2>alex wilcox (us)</h2>
-			<h2>veit b</h2>
-			<h2>mista humiks</h2>
-		</div>
-		<div class="wrapper">
-			<h2>alex wilcox (us)</h2>
-			<h2>tigerhead (de)</h2>
-			<h2>mista humiks</h2>
-			<h2>veit b</h2>
-		</div>
-	</div>
-	<div class="program-smaller-wrapper">
-		<div class="wrapper">
-			<h2>{langs[$lang].programme.workshops.label}</h2>
-			{#each langs[$lang].programme.workshops.texts as text}
-				<h3>{text}</h3>
-			{/each}
-		</div>
-		<div class="wrapper">
-			<h2>{langs[$lang].programme.discussions.label}</h2>
-			{#each langs[$lang].programme.discussions.texts as text}
-				<h3>{text.label}</h3>
-				<p>{text.desc}</p>
-			{/each}
-		</div>
-	</div>
-	<div class="button-wrapper">
-		<ButtonLink href={eventLink} label="event" />
 	</div>
 </ContentBlock>
 
-<ContentBlock backgroundColor="var(--violet)">
-	<Heading heading={langs[$lang].tickets.label} />
-	<div class="tickets-wrapper">
+<ContentBlock
+	backgroundColor="var(--green)"
+	heading={langs[$lang].tickets.label}
+	headingSvg="1"
+	topSvg={null}
+>
+	<div class="tickets-wrapper" id="tickets">
 		{#each langs[$lang].tickets.tickets as ticket, i}
-			<TicketPanel
-				label={ticket.label}
-				desc={ticket.desc}
-				texts={ticket.texts}
-				imgPath={ticketImgs[i]}
-				price={ticket.price}
-				link={ticketLinks[i] instanceof Array ? ticketLinks[i][0] : ticketLinks[i]}
-				priceSecondWave={ticket.priceSecondWave}
-				linkSecondWave={ticketLinks[i] instanceof Array ? ticketLinks[i][1] : ticketLinks[i]}
-				twoCols={langs[$lang].tickets.tickets.length - 1 == i && i % 2 == 0}
-				secondWaveActive={secondWaveActive}
-			/>
+			<TicketCard leadTextColor={ticketColors[i]} {ticket} />
 		{/each}
 	</div>
-	<p class="tickets-warning">{langs[$lang].tickets.warning}</p>
 </ContentBlock>
 
-<BgImageContentBlock imagePath="imgs/footer.jpg">
-	<div class="footer">
-		<ButtonLink label="facebook" href="https://www.facebook.com/DHOGHTEAM" marginAuto={false} />
-		<ButtonLink label="instagram" href="https://www.instagram.com/dhoghteam/" marginAuto={false} />
-		<ButtonLink label="dhoghteam@gmail.com" href="mailto:dhoghteam@gmail.com" marginAuto={false} />
-	</div>
-</BgImageContentBlock>
+<ContentBlock backgroundColor="var(--grey)" headingSvg={null} topSvg={1}>
+	<Footer />
+</ContentBlock>
 
 <style>
-	.landing {
+	.lang-btn-wrapper {
 		position: absolute;
-		width: 100vw;
-		top: 40%;
-	}
-
-	.landing .content-wrapper {
-		width: min-content;
-
-		margin: auto;
-
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.landing .content-wrapper h1 {
-		background-color: var(--peach);
-		width: max-content;
-		padding: 0.3rem 1.5rem;
-		margin: 0;
-	}
-
-	.landing .content-wrapper .buttons-wrapper {
-		display: flex;
-		flex-direction: row;
 		width: 100%;
-		justify-content: space-between;
-		padding-top: 3rem;
+		top: 0;
+		display: flex;
+		flex-direction: row-reverse;
+		z-index: 10;
 	}
 
-	.festival-content-wrapper {
+	.artists-wrapper,
+	.programme-wrapper,
+	.festival-wrapper,
+	.values-wrapper {
 		display: flex;
 		flex-direction: row;
+
+		gap: 1rem;
+		padding: 0 var(--general-px);
 	}
 
-	.festival-content-wrapper .texts {
-		flex: 3;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		padding-left: calc(2 * var(--general-px));
-		padding-right: var(--general-px);
+	.programme-wrapper {
+		margin-top: 2rem;
 	}
 
-	.festival-content-wrapper .img-container {
+	.programme-wrapper .event-btn-wrapper {
+		flex: 1;
+	}
+
+	.programme-wrapper .programme {
 		flex: 2;
-		aspect-ratio: 1 / 1;
-		background-image: url('/imgs/values.jpg');
-		background-size: cover;
-		background-position: center;
 	}
 
-	.values {
-		margin: 0 calc(2 * var(--general-px));
+	.festival-wrapper {
+		gap: 3rem;
+		justify-content: center;
+		align-items: start;
+	}
+
+	.festival-texts-wrapper {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		align-content: space-around;
-		height: 100%;
 	}
 
-	.values h1,
-	.values h2,
-	.values p {
-		color: var(--shadow);
-		background-color: var(--red);
-		padding: 0.5rem;
-	}
-
-	.values p {
+	.festival-wrapper p {
+		width: 570px;
 		margin: 0;
+		border-top: 2px solid var(--black);
+		padding: 4rem 0;
+		font-size: var(--fs-20);
 	}
 
-	.values h2 {
-		margin-bottom: 0;
+	.festival-wrapper img {
+		width: 570px;
+		height: auto;
 	}
 
-	.program-main-wrapper {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: repeat(2, auto);
-		gap: 2rem;
-		padding: calc(2 * var(--general-px));
-		padding-bottom: 0;
-	}
-
-	.program-smaller-wrapper {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		padding: 0 calc(2 * var(--general-px));
-		padding-top: var(--general-px);
-	}
-
-	.program-smaller-wrapper .wrapper {
-		width: 100%;
-	}
-
-	.program-smaller-wrapper .wrapper h2,
-	.program-smaller-wrapper .wrapper h3,
-	.program-smaller-wrapper .wrapper p {
-		color: var(--shadow);
-	}
-
-	.program-smaller-wrapper:last-of-type .wrapper h2:first-of-type {
-		padding-bottom: 2rem;
-	}
-
-	.button-wrapper {
-		width: 100%;
-		padding: 7rem 0;
+	.values-wrapper {
+		padding-top: 10rem;
+		justify-content: center;
+		gap: 5rem;
 	}
 
 	.tickets-wrapper {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(3, auto);
+		grid-template-columns: repeat(3, 1fr);
 
 		gap: 5rem 2rem;
-		padding: calc(1.5 * var(--general-px));
-	}
-
-	.tickets-warning {
-		text-transform: uppercase;
-		color: var(--shadow);
-		width: 100%;
-		text-align: center;
-		margin: 0;
-		padding-bottom: 1rem;
-	}
-
-	.footer {
-		display: flex;
-		flex-direction: row;
-		position: absolute;
-		width: 100%;
-		justify-content: space-evenly;
-		margin: auto;
-		bottom: 10%;
+		padding: 0 var(--general-px);
 	}
 
 	/* Small devices (phones, ≥576px) */
-	@media (max-width: 767.98px) {
-		.landing {
-			top: 50%;
+	@media (max-width: 1200px) {
+		.lang-btn-wrapper {
+			position: relative;
 		}
 
-		.landing .content-wrapper h1 {
-			font-size: var(--fs-24);
-		}
-
-		.festival-content-wrapper {
+		.artists-wrapper,
+		.programme-wrapper,
+		.festival-wrapper,
+		.values-wrapper {
 			flex-direction: column;
+			padding: 0 var(--general-px-sm);
 		}
 
-		.festival-content-wrapper .texts {
-			padding: calc(0.5 * var(--general-px));
+		.programme-wrapper {
+			gap: 3rem;
 		}
 
-		.values {
-			margin: 0 calc(0.5 * var(--general-px));
+		.festival-wrapper img,
+		.festival-wrapper p {
+			width: 100%;
 		}
 
-		.values h1 {
-			font-size: var(--fs-20);
-		}
-
-		.values h2 {
-			font-size: var(--fs-18);
-		}
-
-		.values p {
-			font-size: var(--fs-12);
-		}
-
-		.program-main-wrapper {
-			grid-template-columns: repeat(1, 1fr);
-			padding: calc(0.5 * var(--general-px));
-		}
-
-		.program-smaller-wrapper {
-			padding: calc(0.5 * var(--general-px));
-			flex-direction: column;
-			text-align: center;
-		}
-
-		.program-smaller-wrapper:last-of-type .wrapper h2:first-of-type {
-			padding-bottom: 0;
+		.values-wrapper {
+			padding-top: 5rem;
 		}
 
 		.tickets-wrapper {
-			padding: calc(0.5 * var(--general-px));
 			display: flex;
 			flex-direction: column;
-		}
-
-		.footer {
-			height: 100%;
-			flex-direction: column;
-			align-items: center;
-			bottom: 0;
+			padding: 0;
 		}
 	}
 </style>
