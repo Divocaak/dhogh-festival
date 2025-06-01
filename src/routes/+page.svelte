@@ -227,7 +227,7 @@
 		</div>
 		<div class="programme">
 			{#each langs[$lang].programme as day, i}
-				<ProgrammeDay label={day.label} artists={day.artists} color={ticketColors[i]} />
+				<ProgrammeDay programme={day} color={ticketColors[i]} />
 			{/each}
 		</div>
 	</div>
@@ -252,9 +252,10 @@
 <ContentBlock
 	backgroundColor="var(--green)"
 	heading={langs[$lang].tickets.label}
-	headingSvg="1"
+	headingSvg="2"
 	topSvg={null}
 >
+<p class="flip">{langs[$lang].tickets.flip}</p>
 	<div class="tickets-wrapper" id="tickets">
 		{#each langs[$lang].tickets.tickets as ticket, i}
 			<TicketCard leadTextColor={ticketColors[i]} {ticket} />
@@ -327,6 +328,12 @@
 		padding-top: 10rem;
 		justify-content: center;
 		gap: 5rem;
+	}
+
+	.flip{
+		text-align: center;
+		color: var(--shadow);
+		padding-bottom: 5rem;
 	}
 
 	.tickets-wrapper {

@@ -1,13 +1,15 @@
 <script>
-	export let label;
-	export let artists;
+	export let programme;
 	export let color = 'var(--shadow)';
 </script>
 
 <div class="wrapper" style="--color: {color};">
-	<h2>{label}</h2>
+	<h2>{programme.label}</h2>
 	<p class="pp-supply">
-		{#each artists as artist}{artist}&emsp;{/each}
+		{#each programme.artists as artist}{@html artist}&emsp;{/each}
+	</p>
+	<p class="pp-supply">
+		{#each programme.other as other}{@html other}&emsp;{/each}
 	</p>
 </div>
 
@@ -31,14 +33,23 @@
 	.wrapper p {
 		color: var(--color);
 		text-transform: uppercase;
-		font-size: 2rem;
+		font-size: var(--fs-32);
+	}
+
+	.wrapper p:last-of-type {
+		font-size: var(--fs-24);
+		font-weight: 200;
 	}
 
 	@media (max-width: 1200px) {
-		.wrapper p{
-			position: relative;
+		.wrapper p {
 			font-size: var(--fs-24);
 		}
-	}
 
+		.wrapper p:last-of-type {
+			font-size: var(--fs-20);
+			white-space: normal;
+  word-break: normal;
+		}
+	}
 </style>

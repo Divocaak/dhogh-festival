@@ -41,7 +41,6 @@
 			marginAuto={false}
 		/>
 	</div>
-	<p class="ticket-text">{ticket.text}</p>
 </div>
 
 <style>
@@ -79,7 +78,7 @@
 		left: 50%;
 		top: 5%;
 		transform: translate(-50%, -50%);
-		background-color: var(--blue);
+		background-color: var(--green);
 		z-index: 10;
 	}
 
@@ -145,12 +144,6 @@
 	.ticket-detail .desc {
 		font-size: var(--fs-16);
 		line-height: 1.2rem;
-	}
-
-	.ticket-text {
-		color: var(--shadow);
-		font-size: var(--fs-20);
-		width: 90%;
 	}
 
 	@media (max-width: 1200px) {
