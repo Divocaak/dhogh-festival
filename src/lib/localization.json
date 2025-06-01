@@ -10,18 +10,23 @@
                     "Surrealita",
                     "Dj_Alyaz",
                     "Mor4m",
-                    "VEIT B",
-                    "tvyks"
+                    "..."
+                ],
+                "other": [
+                    "diskuze:&nbsp;krize_současné_<wbr>scény_elektronické_hudby"
                 ]
             },
             {
                 "label": "čt/19_06",
                 "artists": [
                     "Jadran",
-                    "mista_humix",
+                    "Tom_Holic",
                     "BIOTOP",
-                    "Tom_Holič",
-                    "Synth_Library_Prague"
+                    "mista_humix"
+                ],
+                "other": [
+                    "Synth_Library_Prague",
+                    "diskuze:&nbsp;analogová_hudba_<wbr>v_digitální_době"
                 ]
             },
             {
@@ -29,7 +34,11 @@
                 "artists": [
                     "body_bass",
                     "antonin_padrta",
-                    "dj_workshop"
+                    "veit&nbsp;b"
+                ],
+                "other": [
+                    "dj_workshop",
+                    "diskuze:&nbsp;dhogh_x_ehmk"
                 ]
             }
         ],
@@ -57,6 +66,7 @@
         "tickets": {
             "label": "lístky",
             "button": "koupit",
+            "flip": "Votoč kartičku a zjistíš víc.",
             "tickets": [
                 {
                     "label": "true_raver",
@@ -87,8 +97,7 @@
                         }
                     ],
                     "price": "500,-",
-                    "img": "001.jpg",
-                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci "
+                    "img": "001.jpg"
                 },
                 {
                     "label": "raver",
@@ -103,8 +112,7 @@
                         }
                     ],
                     "price": "300,-",
-                    "img": "002.jpg",
-                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci "
+                    "img": "002.jpg"
                 },
                 {
                     "label": "wormuper",
@@ -127,8 +135,7 @@
                         }
                     ],
                     "price": "100-200,-",
-                    "img": "003.jpg",
-                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci "
+                    "img": "003.jpg"
                 }
             ]
         }
@@ -144,18 +151,23 @@
                     "Surrealita",
                     "Dj_Alyaz",
                     "Mor4m",
-                    "VEIT B",
-                    "tvyks"
+                    "..."
+                ],
+                "other": [
+                    "discussion:&nbsp;Burnout_of_the_<wbr>electronic_underground"
                 ]
             },
             {
                 "label": "thu/19_06",
                 "artists": [
                     "Jadran",
-                    "mista_humix",
-                    "BIOTOP",
                     "Tom_Holic",
-                    "Synth_Library_Prague"
+                    "BIOTOP",
+                    "mista_humix"
+                ],
+                "other": [
+                    "Synth_Library_Prague",
+                    "discussion:&nbsp;analog_music_<wbr>in_a_digital_age"
                 ]
             },
             {
@@ -163,7 +175,11 @@
                 "artists": [
                     "body_bass",
                     "antonin_padrta",
-                    "dj_workshop"
+                    "veit&nbsp;b"
+                ],
+                "other": [
+                    "dj_workshop",
+                    "discussion:&nbsp;dhogh_x_ehmk"
                 ]
             }
         ],
@@ -191,6 +207,7 @@
         "tickets": {
             "label": "tickets",
             "button": "buy",
+            "flip": "Flip the card to find out more.",
             "tickets": [
                 {
                     "label": "true_raver",
@@ -221,8 +238,7 @@
                         }
                     ],
                     "price": "500,-",
-                    "img": "001.jpg",
-                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci "
+                    "img": "001.jpg"
                 },
                 {
                     "label": "raver",
@@ -237,8 +253,7 @@
                         }
                     ],
                     "price": "300,-",
-                    "img": "002.jpg",
-                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci "
+                    "img": "002.jpg"
                 },
                 {
                     "label": "wormuper",
@@ -261,8 +276,7 @@
                         }
                     ],
                     "price": "100-200,-",
-                    "img": "003.jpg",
-                    "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci "
+                    "img": "003.jpg"
                 }
             ]
         }
