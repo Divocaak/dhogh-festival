@@ -7,6 +7,8 @@
 	export let marginAuto = true;
 	export let smallerPaddings = false;
 	export let disabled = false;
+	export let isFooter = false;
+	export let isEvent = false;
 </script>
 
 <a
@@ -14,6 +16,8 @@
 	class:margin-auto={marginAuto}
 	class:smaller-paddings={smallerPaddings}
 	class:disabled
+	class:is-footer={isFooter}
+	class:is-event={isEvent}
 	{href}
 	{target}>{label}</a
 >
@@ -60,5 +64,26 @@
 	.disabled:hover {
 		color: var(--background-color);
 		background-color: var(--disabled);
+	}
+
+	.is-footer{
+		font-size: var(--fs-28);
+		padding: 1.25rem 0rem;
+		text-align: center;
+		width: 100%;
+		background-color: var(--grey);
+	}
+
+	.is-event{
+		padding: 1.25rem 0rem;
+		text-align: center;
+		width: 80%;
+		float: left;
+	}
+
+	@media (max-width: 1200px) {
+		.is-event{
+			width: 100%;
+		}
 	}
 </style>

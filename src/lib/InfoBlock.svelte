@@ -1,12 +1,12 @@
 <script>
-	import Button from './Button.svelte';
-	import { lang } from '$lib/LangStore.js';
+	import { lang } from '$lib/stores/LangStore.js';
+	import langs from '$lib/localization.json';
 
 	export let txtColor = 'var(--shadow)';
 </script>
 
 <div class="wrapper" style="--text-color: {txtColor}">
-	<svg width="317" height="70" viewBox="0 0 317 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<svg width="317" height="70" viewBox="0 0 317 70" xmlns="http://www.w3.org/2000/svg" class="logo">
 		<path
 			d="M0 69.226C3.22242 65.9122 5.72341 59.2605 5.72341 48.9807V21.0194C5.72341 10.7637 3.31862 4.08777 0 0.774017H31.5509C60.7451 0.774017 69.4505 14.5128 69.4505 34.9033C69.4505 55.2937 60.7451 69.226 31.5509 69.226H0ZM25.587 67.8715H29.4347C46.2682 67.8715 48.9616 51.5204 48.9616 34.9033C48.9616 18.6731 46.1961 2.15273 29.4347 2.15273H25.587V67.8715Z"
 		/>
@@ -24,10 +24,9 @@
 		/>
 	</svg>
 	<div class="texts-container">
-		<p>electronic<br />music<br />festival</p>
-		<p>žižkárna<br />18-20-06<br />2026</p>
+		<p class="pp-supply">electronic<br />music<br />festival</p>
+		<p class="pp-supply">žižkárna<br />18-20-06<br />2025</p>
 	</div>
-	<Button label="cz/en" onclick={() => lang.set($lang === "cs" ? 'en' : "cs")} />
 </div>
 
 <style>
@@ -36,13 +35,11 @@
 	}
 
 	.wrapper {
-		position: absolute;
 		display: flex;
 		flex-direction: row;
-		justify-content: start;
 		align-items: center;
-		gap: 5rem;
-		padding: 2rem 3rem;
+		justify-content: space-between;
+		padding: var(--general-px);
 	}
 
 	p {
@@ -56,20 +53,20 @@
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		gap: 5rem;
+		gap: 3rem;
 	}
 
-	path {
+	.logo path {
 		fill: var(--text-color);
 	}
 
-	@media (max-width: 767px) {
+	@media (max-width: 1200px) {
 		.wrapper {
 			flex-direction: column;
 			gap: 1rem;
 
-			padding: 1rem;
-			width: calc(100% - 2rem);
+			padding: var(--general-px-sm);
+			width: calc(100% - (2 * var(--general-px-sm)));
 		}
 
 		.texts-container {
