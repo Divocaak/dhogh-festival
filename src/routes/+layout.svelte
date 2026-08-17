@@ -28,15 +28,8 @@
 	}
 
 	:global(:root) {
-		--black: #1D1D1B;
-		--grey: #353535;
-		--shadow: #dadada;
-		--disabled: #c3c3c3;
-		--red: #e73c30;
-		--blue: #7f9ac2;
-		--green: #52774f;
-		--peach: #f9c4aa;
-		--violet: #8e79b6;
+		--yellow: #ffc800;
+		--black: #1d1d1b;
 
 		--card-border-radius: 1rem;
 
@@ -60,11 +53,18 @@
 		--fs-150: clamp(150px, 9.81vw, 9.37rem);
 	}
 
-	:global(h1, h2, h3, h4, h5, h6, p, a, button) {
+	:global(body) {
+		margin: 0;
+		background-color: var(--black);
+	}
+
+	:global(html) {
+		scroll-behavior: smooth;
+	}
+
+	:global(h1, h2, h3, h4, h5, h6, p, a, button, span) {
 		font-family: 'PPSupplyMono', monospace;
 		font-style: normal;
-
-		color: var(--black);
 	}
 
 	:global(p) {
@@ -72,16 +72,6 @@
 		line-height: 1.5em;
 		font-weight: 400;
 		font-size: var(--fs-24);
-	}
-	
-	:global(.pp-supply){
-		font-family: "PPSupplyMono", monospace;
-		font-weight: 300;
-	}
-
-	:global(h1, h2, h3, h4, h5, h6) {
-		text-transform: uppercase;
-		font-weight: 400;
 	}
 
 	:global(a) {
@@ -93,20 +83,16 @@
 		color: var(--pink);
 	}
 
-	:global(body) {
-		margin: 0;
-		background-color: var(--grey);
-	}
-	
-	:global(html){
-		scroll-behavior: smooth;
+	:global(h1, h2, h3, h4, h5, h6) {
+		text-transform: uppercase;
+		font-weight: 400;
 	}
 
 	:global(h1) {
 		font-size: var(--fs-48);
 	}
 
-	:global(h2){
+	:global(h2) {
 		font-size: var(--fs-32);
 	}
 </style>
