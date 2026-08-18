@@ -46,10 +46,16 @@
 
         height: 100%;
         width: auto;
+
+        transition: all 0.17s ease-in-out;
 	}
 
 	.wrapper svg {
 		height: 70%;
         width: auto;
 	}
+
+    .wrapper a:hover{
+        color: var(--white);
+    }
 </style>

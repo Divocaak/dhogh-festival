@@ -6,12 +6,12 @@
 
 <div class="wrapper">
 	<div class="image" style={`background-image: url("${img}")`}></div>
-	<h2>
+	<h3 class="f1 tt-uppercase">
 		{#each label.split(' ') as word}
 			<span>{word}</span>
 		{/each}
-	</h2>
-	<p>{text}</p>
+	</h3>
+	<p class="f3">{text}</p>
 </div>
 
 <style>
@@ -34,19 +34,16 @@
 		border-radius: 4%;
 	}
 
-	.wrapper h2 {
+	.wrapper h3 {
 		margin: 0;
-		font-size: var(--fs-48);
-		font-weight: 300;
 		word-wrap: break-word;
 	}
 
-	.wrapper h2 span {
+	.wrapper h3 span {
 		display: block;
 	}
 
 	.wrapper p {
-		font-size: var(--fs-20);
 		margin: 0;
 	}
 

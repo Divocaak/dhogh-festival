@@ -204,7 +204,7 @@
 <div class="content-block black">
 	<div class="lang-btn-wrapper">
 		<button onclick={() => lang.set($lang === 'cs' ? 'en' : 'cs')}>
-			<Pill label={$lang === 'cs' ? 'en' : 'cz'} inverted={true} />
+			<Pill hoverfx={true} label={$lang === 'cs' ? 'en' : 'cz'} />
 		</button>
 	</div>
 	<svg
@@ -245,12 +245,12 @@
 
 	<div class="cols" style="padding: var(--general-px);">
 		<div class="col">
-			<p>{langs[$lang].landing.label}</p>
-			<p>{langs[$lang].landing.address}</p>
+			<p class="f3 tt-uppercase">{langs[$lang].landing.label}</p>
+			<p class="f3 tt-uppercase">{langs[$lang].landing.address}</p>
 		</div>
 		<div class="col">
-			<p>{langs[$lang].landing.desc1}</p>
-			<p>{langs[$lang].landing.desc2}</p>
+			<p class="f3 tt-uppercase">{langs[$lang].landing.desc1}</p>
+			<p class="f3 tt-uppercase">{langs[$lang].landing.desc2}</p>
 		</div>
 		<div class="col">
 			<Socials />
@@ -258,7 +258,7 @@
 	</div>
 </div>
 
-<div class="content-block">
+<div class="content-block lead-video-wrapper">
 	<VideoPlayer src="vids/landing.mp4" />
 </div>
 
@@ -273,15 +273,18 @@
 	</div>
 	<div class="artists">
 		{#each langs[$lang].programme.artists as artist}
-			<h2>{artist}</h2>
+			<h2 class="f0 tt-uppercase">{artist}</h2>
 		{/each}
-		<h3>{langs[$lang].programme.more}</h3>
+		<h2 class="f2 tt-uppercase">{langs[$lang].programme.more}</h2>
 	</div>
 </div>
 
 <div class="content-block yellow padded tickets">
-	<VideoPlayer src="vids/tickets.mp4" />
+	<div class="video-wrapper">
+		<VideoPlayer src="vids/tickets.mp4" />
+	</div>
 	<PillButton label={langs[$lang].tickets} />
+	<p class="f3 tt-uppercase">{langs[$lang].cta}</p>
 </div>
 
 <div class="content-block yellow padded">
@@ -299,10 +302,12 @@
 
 <footer class="black cols" style="padding: var(--general-px);">
 	<div class="col">
-		<a href="mailto:dhoghteam@gmail.com">dhoghteam@gmail.com</a>
+		<p>
+			<a href="mailto:dhoghteam@gmail.com" class="mail-link f3 tt-uppercase">dhoghteam@gmail.com</a>
+		</p>
 	</div>
 	<div class="col">
-		<p>DHOGH TEAM &copy; 2026</p>
+		<p class="f3 tt-uppercase">DHOGH TEAM &copy; 2026</p>
 	</div>
 	<div class="col">
 		<Socials />
@@ -313,11 +318,12 @@
 	.content-block {
 		position: relative;
 		width: 100%;
-		height: 100%;
 		min-height: 100vh;
+		box-sizing: border-box;
 	}
 
-	.content-block.black {
+	.content-block.black,
+	footer.black {
 		background-color: var(--black);
 		color: var(--yellow) !important;
 	}
@@ -331,24 +337,24 @@
 		display: block;
 		width: 100%;
 		height: auto;
-
 		padding: var(--general-px) 0;
+		box-sizing: border-box;
 	}
 
 	.cols {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		width: 100%;
-
 		box-sizing: border-box;
-
 		align-content: space-between;
 		justify-content: space-between;
+		gap: 2rem;
 	}
 
 	.col {
 		display: flex;
 		flex-direction: column;
+		min-width: 0;
 	}
 
 	.col:nth-child(2) {
@@ -361,7 +367,15 @@
 		text-align: right;
 	}
 
+	.content-block.lead-video-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+	}
+
 	.content-block img {
+		display: block;
 		position: relative;
 		width: 100%;
 		height: auto;
@@ -369,13 +383,16 @@
 
 	.padded {
 		padding: var(--general-px);
-		width: calc(100% - 2 * var(--general-px));
+		width: 100%;
+		box-sizing: border-box;
 	}
 
 	.programme-label {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
 	}
 
 	.bottom-border-line {
@@ -383,11 +400,25 @@
 		border-bottom: 3px solid var(--black);
 	}
 
+	/* .artists {
+		padding-top: 2rem;
+	}
+
+	.artists h2 {
+		margin: 0;
+	} */
+
 	.tickets {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+	}
+
+	.tickets .video-wrapper {
+		width: 40%;
+		max-width: 700px;
+		padding-bottom: 5rem;
 	}
 
 	.lang-btn-wrapper {
@@ -398,16 +429,210 @@
 		display: flex;
 		flex-direction: row-reverse;
 		z-index: 10;
+		box-sizing: border-box;
 	}
 
 	.lang-btn-wrapper button {
 		all: unset;
+		cursor: pointer;
 	}
 
-	/* Small devices (phones, ≥576px) */
+	.mail-link {
+		text-decoration: none;
+		color: inherit;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 18px;
+		line-height: 140%;
+		letter-spacing: 0%;
+		transition: all 0.17s ease-in-out;
+		position: relative;
+		display: block;
+		word-break: break-word;
+	}
+
+	.mail-link:hover {
+		color: var(--white);
+	}
+
+	/* --------------------------------
+	   TABLET
+	   -------------------------------- */
+
 	@media (max-width: 1200px) {
 		.lang-btn-wrapper {
 			position: relative;
+		}
+	}
+
+	/* --------------------------------
+	   SMALL TABLET
+	   -------------------------------- */
+
+	@media (max-width: 900px) {
+		:global(:root) {
+			--general-px: 3rem;
+		}
+
+		.cols {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 3rem 2rem;
+		}
+
+		.cols .col:nth-child(3) {
+			grid-column: 1 / -1;
+			align-items: flex-start;
+			text-align: left;
+		}
+
+		.tickets .video-wrapper {
+			width: 60%;
+		}
+	}
+
+	/* --------------------------------
+	   MOBILE
+	   -------------------------------- */
+
+	@media (max-width: 600px) {
+		:global(:root) {
+			--general-px: 1.25rem;
+			--general-px-sm: 1.25rem;
+		}
+
+		.content-block {
+			min-height: auto;
+		}
+
+		/*
+		 * Give the first black section enough room
+		 * for the logo + information.
+		 */
+		.content-block.black:first-child {
+			padding-bottom: 2rem;
+		}
+
+		.content-block svg {
+			width: 100%;
+			padding: 3rem 0 2rem;
+		}
+
+		.cols {
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+			padding: var(--general-px) !important;
+		}
+
+		.col,
+		.col:nth-child(2),
+		.col:nth-child(3) {
+			width: 100%;
+			align-items: flex-start;
+			text-align: left;
+		}
+
+		.col:nth-child(2) {
+			align-items: flex-start;
+			text-align: left;
+		}
+
+		.col:nth-child(3) {
+			align-items: flex-start;
+			text-align: left;
+		}
+
+		.content-block.lead-video-wrapper {
+			min-height: auto;
+			aspect-ratio: 16 / 9;
+		}
+
+		.content-block.lead-video-wrapper :global(video) {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.padded {
+			padding: var(--general-px);
+		}
+
+		.programme-label {
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			gap: 0.5rem;
+		}
+
+		.bottom-border-line {
+			padding-bottom: 12px;
+			border-bottom-width: 2px;
+		}
+
+		.artists {
+			padding-top: 1.5rem;
+		}
+
+		.artists h2 {
+			font-size: clamp(2.5rem, 12vw, 5rem);
+			line-height: 0.85;
+			overflow-wrap: anywhere;
+		}
+
+		.artists .f2 {
+			margin-top: 1.5rem;
+		}
+
+		.tickets {
+			min-height: auto;
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+		}
+
+		.tickets .video-wrapper {
+			width: 100%;
+			padding-bottom: 2rem;
+		}
+
+		.tickets :global(video) {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+
+		.mail-link {
+			font-size: 16px;
+		}
+
+		footer {
+			min-height: auto !important;
+		}
+
+		footer .cols {
+			padding: var(--general-px) !important;
+		}
+	}
+
+	/* --------------------------------
+	   VERY SMALL PHONES
+	   -------------------------------- */
+
+	@media (max-width: 400px) {
+		:global(:root) {
+			--general-px: 1rem;
+		}
+
+		.content-block svg {
+			padding-top: 2.5rem;
+			padding-bottom: 1.5rem;
+		}
+
+		.artists h2 {
+			font-size: clamp(2.2rem, 12vw, 3.5rem);
+		}
+
+		.cols {
+			gap: 1.5rem;
 		}
 	}
 </style>

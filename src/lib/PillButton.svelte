@@ -4,5 +4,5 @@
 </script>
 
 <a href="https://goout.net/cs/dhogh-festival/szepoly/" target="_blank">
-	<Pill {label} />
+	<Pill tix={true} {label} hoverfx={true}/>
 </a>
