@@ -85,7 +85,7 @@
 						{
 							"@type": "Person",
 							"name": "Veit B"
-						},
+						}
 					]
 				},
 				{
@@ -143,7 +143,7 @@
 						{
 							"@type": "Person",
 							"name": "Veit B"
-						},
+						}
 					]
 				}
 			],
@@ -165,7 +165,7 @@
 					"priceCurrency": "CZK",
 					"availability": "https://schema.org/InStock",
 					"url": "https://goout.net/cs/dhogh-festival/szepoly/"
-				},
+				}
 			],
 			"organizer": {
 				"@type": "Organization",
