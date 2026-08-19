@@ -23,24 +23,24 @@
             "more": "a další"
         },
         "tickets": "lístky",
-        "cta":"lorem ipson",
+        "cta": "Předprodej je zahájen! Vlna nejvýhodnějších lístků bude brzo pryč",
         "about": {
             "pill": "o festivalu",
             "values": [
                 {
                     "img": "imgs/team.jpg",
                     "label": "dhogh team",
-                    "text": "Since 1992, Westwood Crest Middle School has proudly hosted its beloved 'Paper Lanterns' event, a cherished tradition woven into the fabric of our school community. Inspired by the rich history of the Chinese Paper Lantern Festival, our event began as a simple gathering, a way to celebrate the beauty and symbolism of these luminous creations. "
+                    "text": "DHOGH Team již 12 let přináší kvalitní elektronickou hudbu s originální scénografií na budějovickou scénu. Od malých house parties jsme postupem času začali dělat první klubové noci až jsme se v roce 2019 usídlili v budějovické Žižkárně. Zde již 7 let pracujeme s různými prostory a dlouhodobě koncepčně rozvíjíme co si po pojmem party lidé v Českých Budějovicích mohou představit."
                 },
                 {
                     "img": "imgs/scene.jpg",
                     "label": "kreativní scénografie",
-                    "text": "Since 1992, Westwood Crest Middle School has proudly hosted its beloved 'Paper Lanterns' event, a cherished tradition woven into the fabric of our school community. Inspired by the rich history of the Chinese Paper Lantern Festival, our event began as a simple gathering, a way to celebrate the beauty and symbolism of these luminous creations. "
+                    "text": "Jedinečná scénografie je základem každého mejdanu. Pracujeme jak s fyzickým prostředím, tak světlem i projekcemi. Blízká je nám DIY a Re-Use mentalita, která otevírá možnosti vytvářet zcela jedinečné kousky. V realizacích se snažíme překvapit, ať už nápaditostí nebo klidně vtipem."
                 },
                 {
                     "img": "imgs/safety.jpg",
                     "label": "bezpečná atmosféra",
-                    "text": "Since 1992, Westwood Crest Middle School has proudly hosted its beloved 'Paper Lanterns' event, a cherished tradition woven into the fabric of our school community. Inspired by the rich history of the Chinese Paper Lantern Festival, our event began as a simple gathering, a way to celebrate the beauty and symbolism of these luminous creations."
+                    "text": "Naší snahou je, aby se každý na našich akcích cítil bezpečně. Odsuzujeme rasismus, homofobii a veškeré další projevy nenávisti nebo násilí. Na místě máme vždy proškolený personál, který je připraven pomoci s jakoukoliv situací. Veškeré akce respektují pravidla 'safe-space.'"
                 }
             ]
         }
@@ -53,8 +53,8 @@
             "desc2": "16 h rave marathon"
         },
         "programme": {
-            "pill": "program",
-            "pill2": "pá 17:00 > so 09:00",
+            "pill": "programme",
+            "pill2": "fri 17:00 > sat 09:00",
             "artists": [
                 "bratři",
                 "hrtl",
@@ -66,27 +66,27 @@
                 "biotop",
                 "veit b"
             ],
-            "more": "a další"
+            "more": "and more"
         },
-        "tickets": "lístky",
-        "cta":"lorem ipson",
+        "tickets": "tickets",
+        "cta": "Presale has started! The first wave of the most affordable tickets will be gone soon.",
         "about": {
-            "pill": "o festivalu",
+            "pill": "about festival",
             "values": [
                 {
                     "img": "imgs/team.jpg",
                     "label": "dhogh team",
-                    "text": "Since 1992, Westwood Crest Middle School has proudly hosted its beloved 'Paper Lanterns' event, a cherished tradition woven into the fabric of our school community. Inspired by the rich history of the Chinese Paper Lantern Festival, our event began as a simple gathering, a way to celebrate the beauty and symbolism of these luminous creations. "
+                    "text": "For 12 years, the DHOGH Team has been bringing high-quality electronic music and original stage design to the Budějovice scene. What started as small house parties gradually evolved into our first club nights, until we finally made our home at Žižkárna in 2019. For 7 years now, we've been working with various spaces here, continually and conceptually redefining what people in České Budějovice imagine when they hear the word 'party.'"
                 },
                 {
                     "img": "imgs/scene.jpg",
-                    "label": "kreativní scénografie",
-                    "text": "Since 1992, Westwood Crest Middle School has proudly hosted its beloved 'Paper Lanterns' event, a cherished tradition woven into the fabric of our school community. Inspired by the rich history of the Chinese Paper Lantern Festival, our event began as a simple gathering, a way to celebrate the beauty and symbolism of these luminous creations. "
+                    "label": "Creative Scenography",
+                    "text": "Unique stage design is the foundation of every party. We work with the physical space itself, as well as lighting and projections. We embrace a DIY and re-use mentality, which gives us the freedom to create truly one-of-a-kind pieces. In our creations, we always strive to surprise you—whether through pure creativity or simply a good touch of humor."
                 },
                 {
                     "img": "imgs/safety.jpg",
-                    "label": "bezpečná atmosféra",
-                    "text": "Since 1992, Westwood Crest Middle School has proudly hosted its beloved 'Paper Lanterns' event, a cherished tradition woven into the fabric of our school community. Inspired by the rich history of the Chinese Paper Lantern Festival, our event began as a simple gathering, a way to celebrate the beauty and symbolism of these luminous creations."
+                    "label": "safe space",
+                    "text": "Our goal is to make sure everyone feels safe at our events. We strictly condemn racism, homophobia, and any other forms of hate or violence. We always have trained staff on site who are ready to help with any situation. All of our events follow 'safe space' principles."
                 }
             ]
         }

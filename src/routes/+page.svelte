@@ -14,9 +14,9 @@
 		{
 			"@context": "https://schema.org",
 			"@type": "Festival",
-			"name": "DHOGH Festival 2025",
-			"startDate": "2025-06-18",
-			"endDate": "2025-06-20",
+			"name": "DHOGH Festival 2026",
+			"startDate": "2026-09-04",
+			"endDate": "2026-09-05",
 			"location": {
 				"@type": "Place",
 				"name": "Žižkárna",
@@ -32,8 +32,8 @@
 			"eventSchedule": [
 				{
 					"@type": "Event",
-					"name": "Středa - Local DJs, Ableton Workshop, DJ Workshop",
-					"startDate": "2025-06-18",
+					"name": "Pátek",
+					"startDate": "2026-09-04",
 					"location": {
 						"@type": "Place",
 						"name": "Žižkárna",
@@ -51,19 +51,47 @@
 							"name": "body_bass"
 						},
 						{
-							"@type": "Person",
-							"name": "antonin_padrta"
+							"@type": "MusicGroup",
+							"name": "Bratři"
 						},
 						{
-							"@type": "Event",
-							"name": "DJ Workshop"
-						}
+							"@type": "Person",
+							"name": "HRTL"
+						},
+						{
+							"@type": "Person",
+							"name": "Scheibenwischer"
+						},
+						{
+							"@type": "MusicGroup",
+							"name": "Chryzotil 271"
+						},
+						{
+							"@type": "Person",
+							"name": "SJ Yellow"
+						},
+						{
+							"@type": "MusicGroup",
+							"name": "TMK"
+						},
+						{
+							"@type": "Person",
+							"name": "Tvyks"
+						},
+						{
+							"@type": "Person",
+							"name": "Biotop"
+						},
+						{
+							"@type": "Person",
+							"name": "Veit B"
+						},
 					]
 				},
 				{
 					"@type": "Event",
-					"name": "Čtvrtek - Live Sets, Synth Workshop",
-					"startDate": "2025-06-19",
+					"name": "Sobota",
+					"startDate": "2026-09-05",
 					"location": {
 						"@type": "Place",
 						"name": "Žižkárna",
@@ -78,111 +106,66 @@
 					"performer": [
 						{
 							"@type": "MusicGroup",
-							"name": "Jadran"
-						},
-						{
-							"@type": "Person",
-							"name": "mista_humix"
+							"name": "body_bass"
 						},
 						{
 							"@type": "MusicGroup",
-							"name": "BIOTOP"
+							"name": "Bratři"
 						},
 						{
 							"@type": "Person",
-							"name": "Tom_Holič"
-						},
-						{
-							"@type": "Organization",
-							"name": "Synth Library Prague"
-						}
-					]
-				},
-				{
-					"@type": "Event",
-					"name": "Pátek - Open Air (17:00-22:00)",
-					"startDate": "2025-06-20T17:00",
-					"endDate": "2025-06-20T22:00",
-					"location": {
-						"@type": "Place",
-						"name": "Žižkárna",
-						"url": "https://zizkarna.cz",
-						"address": {
-							"@type": "PostalAddress",
-							"streetAddress": "Žižkova tř. 28",
-							"addressLocality": "České Budějovice",
-							"addressCountry": "CZ"
-						}
-					},
-					"performer": [
-						{
-							"@type": "Person",
-							"name": "TIGERHEAD",
-							"sameAs": "https://ra.co/dj/tigerhead"
+							"name": "HRTL"
 						},
 						{
 							"@type": "Person",
-							"name": "ALEX_WILCOX",
-							"sameAs": "https://www.discogs.com/artist/8125675-Alex-Wilcox"
+							"name": "Scheibenwischer"
+						},
+						{
+							"@type": "MusicGroup",
+							"name": "Chryzotil 271"
 						},
 						{
 							"@type": "Person",
-							"name": "WNCHNZ"
+							"name": "SJ Yellow"
+						},
+						{
+							"@type": "MusicGroup",
+							"name": "TMK"
 						},
 						{
 							"@type": "Person",
-							"name": "Surrealita",
-							"sameAs": "https://ra.co/dj/surrealita"
+							"name": "Tvyks"
 						},
 						{
 							"@type": "Person",
-							"name": "Dj_Alyaz",
-							"sameAs": "https://ra.co/dj/djalyaz"
+							"name": "Biotop"
 						},
 						{
 							"@type": "Person",
-							"name": "Mor4m"
+							"name": "Veit B"
 						},
-						{
-							"@type": "Person",
-							"name": "VEIT B",
-							"sameAs": "https://soundcloud.com/veit-b"
-						},
-						{
-							"@type": "Person",
-							"name": "tvyks"
-						}
 					]
 				}
 			],
 			"offers": [
 				{
 					"@type": "Offer",
-					"name": "Full Festival Pass",
+					"name": "Morning Rave",
+					"description": "Vstupenka na ranní rave v sobotu",
+					"price": "100",
+					"priceCurrency": "CZK",
+					"availability": "https://schema.org/InStock",
+					"url": "https://goout.net/cs/dhogh-festival/szepoly/"
+				},
+				{
+					"@type": "Offer",
+					"name": "PRvní vlna",
 					"description": "Vstupenka na všechny festivalové dny včetně páteční afterparty",
-					"price": "500",
+					"price": "400",
 					"priceCurrency": "CZK",
 					"availability": "https://schema.org/InStock",
-					"url": "https://goout.net/cs/dhogh-festival-2025/szjdaux/"
+					"url": "https://goout.net/cs/dhogh-festival/szepoly/"
 				},
-				{
-					"@type": "Offer",
-					"name": "Friday Open Air",
-					"description": "Vstupenka na páteční program na hlavní stage, kde vystoupí oba headlineři",
-					"price": "300",
-					"priceCurrency": "CZK",
-					"availability": "https://schema.org/InStock",
-					"url": "https://goout.net/cs/dhogh-festival-2025/szjdaux/"
-				},
-				{
-					"@type": "Offer",
-					"name": "Wormuper (Středa/Čtvrtek)",
-					"description": "Vstupenka na středeční a čtvrteční program zaměřený na vzdělávání a komunitu",
-					"price": "100-200",
-					"priceCurrency": "CZK",
-					"availability": "https://schema.org/InStock",
-					"url": "https://goout.net/cs/dhogh-festival-2025/szjdaux/"
-				}
 			],
 			"organizer": {
 				"@type": "Organization",
@@ -259,7 +242,7 @@
 </div>
 
 <div class="content-block lead-video-wrapper">
-	<VideoPlayer src="vids/landing.mp4" />
+	<VideoPlayer src="vids/landing.mov" />
 </div>
 
 <div class="content-block">

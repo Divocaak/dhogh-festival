@@ -79,8 +79,8 @@
 	}
 
 	:global(:root) {
-		--yellow: #ffc800;
-		--black: #1d1d1b;
+		--yellow: #FFCE00;
+		--black: #20201D;
 		--white: #ffffff;
 
 		--card-border-radius: 1rem;
