@@ -1,282 +1,92 @@
 {
     "cs": {
-        "programme": [
-            {
-                "label": "pá/20_06",
-                "artists": [
-                    "TIGERHEAD",
-                    "ALEX_WILCOX",
-                    "WNCHNZ",
-                    "Surrealita",
-                    "Dj_Alyaz",
-                    "veit&nbsp;b",
-                    "tvyks"
-                ],
-                "other": [
-                    "diskuze:&nbsp;krize_současné_<wbr>scény_elektronické_hudby"
-                ]
-            },
-            {
-                "label": "čt/19_06",
-                "artists": [
-                    "Jadran",
-                    "Tom_Holic",
-                    "BIOTOP",
-                    "mista_humix"
-                ],
-                "other": [
-                    "Synth_dílna/Live_jam",
-                    "diskuze:&nbsp;analogová_hudba_<wbr>v_digitální_době"
-                ]
-            },
-            {
-                "label": "st/18_06",
-                "artists": [
-                    "body_bass",
-                    "antonin_padrta",
-                    "Mor4m"
-                ],
-                "other": [
-                    "Synth_Library_Prague",
-                    "diskuze:&nbsp;dhogh_x_ehmk"
-                ]
-            }
-        ],
-        "festival": [
-            "Festival propojuje taneční hudbu, umění, filozofii a komunitního ducha undergroundové scény. Poskytuje nejen kulturní zážitek, ale i prostor pro hlubší reflexi nad významem elektronické hudby a jejího vlivu na městský noční život.",
-            "Cílem festivalu je také přiblížit elektronickou hudbu a s ní spojenou kulturu širší veřejnosti a mladé generaci. Rozšířit komunitu a podnítit zástupce mladé generace k tvorbě hudby nebo DJingu, a tak vytvořit dlouhodobou kontinuitu."
-        ],
-        "values": {
-            "label": "naše hodnoty",
+        "landing": {
+            "label": "dhogh festival 04 09 2026",
+            "address": "žižkárna, č. budějovice",
+            "desc1": "day and night",
+            "desc2": "16 h rave marathon"
+        },
+        "programme": {
+            "pill": "program",
+            "pill2": "pá 17:00 > so 09:00",
+            "artists": [
+                "bratři",
+                "hrtl",
+                "SCHEIBENWISCHER",
+                "chryzotil 271",
+                "sj yellow",
+                "tmk",
+                "tvyks",
+                "biotop",
+                "veit b"
+            ],
+            "more": "a další"
+        },
+        "tickets": "lístky",
+        "cta": "Předprodej je zahájen! Vlna nejvýhodnějších lístků bude brzo pryč",
+        "about": {
+            "pill": "o festivalu",
             "values": [
                 {
-                    "label": "Kreativní scénografie",
-                    "desc": "Pro každou club night se snažíme vymyslet nový scénografický koncept, tak aby návštěvník zažil nové možnosti prostoru. SIlným prvkem je také DIY a Re-use přístup, kdy většina rekvizit vzniká znovuvyužitím věcí s jiným původním účelem."
+                    "img": "imgs/team.jpg",
+                    "label": "dhogh team",
+                    "text": "DHOGH Team již 12 let přináší kvalitní elektronickou hudbu s originální scénografií na budějovickou scénu. Od malých house parties jsme postupem času začali dělat první klubové noci až jsme se v roce 2019 usídlili v budějovické Žižkárně. Zde již 7 let pracujeme s různými prostory a dlouhodobě koncepčně rozvíjíme co si po pojmem party lidé v Českých Budějovicích mohou představit."
                 },
                 {
-                    "label": "Bezpečná atmosféra",
-                    "desc": "Náš prostor je více než jen místem hudby - je to útočiště bezpečí, respektu a přijetí. Každý, kdo sem vstoupí, je součástí komunity, kde nezáleží na původu, identitě nebo zkušenostech."
+                    "img": "imgs/scene.jpg",
+                    "label": "kreativní scénografie",
+                    "text": "Jedinečná scénografie je základem každého mejdanu. Pracujeme jak s fyzickým prostředím, tak světlem i projekcemi. Blízká je nám DIY a Re-Use mentalita, která otevírá možnosti vytvářet zcela jedinečné kousky. V realizacích se snažíme překvapit, ať už nápaditostí nebo klidně vtipem."
                 },
                 {
-                    "label": "Komunita a sdílení",
-                    "desc": "Party nejsou jen o hudbě, ale i o lidech. Kolektiv vytváří prostor pro propojení, vzájemnou inspiraci a podporu mezi umělci, organizátory i návštěvníky."
-                }
-            ]
-        },
-        "tickets": {
-            "label": "lístky",
-            "button": "koupit",
-            "flip": "Votoč kartičku a zjistíš víc.",
-            "tickets": [
-                {
-                    "label": "true_raver",
-                    "subheading": "FULL_FESTIVAL_PASS",
-                    "desc": "vstupenka na všechny festivalové dny včetně páteční afterparty",
-                    "texts": [
-                        {
-                            "label": "18_06 středa",
-                            "texts": [
-                                "local_djs",
-                                "ableton_workshop",
-                                "dj_workshop"
-                            ]
-                        },
-                        {
-                            "label": "19_06 čtvrtek",
-                            "texts": [
-                                "live_sets",
-                                "synth_workshop"
-                            ]
-                        },
-                        {
-                            "label": "20_06 pátek",
-                            "texts": [
-                                "open_air(17-22)"
-                            ],
-                            "afterpartyWarning": "omezená kapacita"
-                        }
-                    ],
-                    "price": "500,-",
-                    "img": "001.jpg"
-                },
-                {
-                    "label": "raver",
-                    "subheading": "FRIDAY_OPEN_AIR",
-                    "desc": "vstupenka na páteční program na hlavní stage, kde vystoupí oba headlineři",
-                    "texts": [
-                        {
-                            "label": "20_06 pátek",
-                            "texts": [
-                                "open_air(17-22)"
-                            ]
-                        }
-                    ],
-                    "price": "300,-",
-                    "img": "002.jpg"
-                },
-                {
-                    "label": "wormuper",
-                    "subheading": "WED/THU_for_education&community",
-                    "texts": [
-                        {
-                            "label": "18_06 středa",
-                            "texts": [
-                                "local_djs",
-                                "ableton_workshop",
-                                "dj_workshop"
-                            ]
-                        },
-                        {
-                            "label": "19_06 čtvrtek",
-                            "texts": [
-                                "live_sets",
-                                "synth_workshop"
-                            ]
-                        }
-                    ],
-                    "price": "100-200,-",
-                    "img": "003.jpg"
+                    "img": "imgs/safety.jpg",
+                    "label": "bezpečná atmosféra",
+                    "text": "Naší snahou je, aby se každý na našich akcích cítil bezpečně. Odsuzujeme rasismus, homofobii a veškeré další projevy nenávisti nebo násilí. Na místě máme vždy proškolený personál, který je připraven pomoci s jakoukoliv situací. Veškeré akce respektují pravidla 'safe-space.'"
                 }
             ]
         }
     },
     "en": {
-        "programme": [
-            {
-                "label": "fri/20_06",
-                "artists": [
-                    "TIGERHEAD",
-                    "ALEX_WILCOX",
-                    "WNCHNZ",
-                    "Surrealita",
-                    "Dj_Alyaz",
-                    "veit&nbsp;b",
-                    "tvyks"
-                ],
-                "other": [
-                    "discussion:&nbsp;Burnout_of_the_<wbr>electronic_underground"
-                ]
-            },
-            {
-                "label": "thu/19_06",
-                "artists": [
-                    "Jadran",
-                    "Tom_Holic",
-                    "BIOTOP",
-                    "mista_humix"
-                ],
-                "other": [
-                    "Synth_Live_Jam",
-                    "discussion:&nbsp;analog_music_<wbr>in_a_digital_age"
-                ]
-            },
-            {
-                "label": "wed/18_06",
-                "artists": [
-                    "body_bass",
-                    "antonin_padrta",
-                    "Mor4m"
-                ],
-                "other": [
-                    "Synth_Library_Prague",
-                    "discussion:&nbsp;dhogh_x_ehmk"
-                ]
-            }
-        ],
-        "festival": [
-            "The festival fuses dance music, art, philosophy, and the community spirit of the underground scene. It's not just a cultural trip - it's a space for deeper reflection on the meaning of electronic music and how it shapes the pulse of the city's nightlife.",
-            "The mission is to open up the world of electronic music and its culture to a wider crowd, especially the next generation. It's about growing the scene, sparking inspiration, and getting young heads into producing or DJing - keeping the vibe alive and the future flowing."
-        ],
-        "values": {
-            "label": "our values",
+        "landing": {
+            "label": "dhogh festival 04 09 2026",
+            "address": "žižkárna, č. budějovice",
+            "desc1": "day and night",
+            "desc2": "16 h rave marathon"
+        },
+        "programme": {
+            "pill": "programme",
+            "pill2": "fri 17:00 > sat 09:00",
+            "artists": [
+                "bratři",
+                "hrtl",
+                "SCHEIBENWISCHER",
+                "chryzotil 271",
+                "sj yellow",
+                "tmk",
+                "tvyks",
+                "biotop",
+                "veit b"
+            ],
+            "more": "and more"
+        },
+        "tickets": "tickets",
+        "cta": "Presale has started! The first wave of the most affordable tickets will be gone soon.",
+        "about": {
+            "pill": "about festival",
             "values": [
                 {
-                    "label": "Creative scenography",
-                    "desc": "Every club night brings a fresh visual concept — reimagining the space to give ravers a new kind of trip. DIY and re-use are key: most props are crafted from repurposed materials, giving forgotten stuff a second life on the dancefloor."
+                    "img": "imgs/team.jpg",
+                    "label": "dhogh team",
+                    "text": "For 12 years, the DHOGH Team has been bringing high-quality electronic music and original stage design to the Budějovice scene. What started as small house parties gradually evolved into our first club nights, until we finally made our home at Žižkárna in 2019. For 7 years now, we've been working with various spaces here, continually and conceptually redefining what people in České Budějovice imagine when they hear the word 'party.'"
                 },
                 {
-                    "label": "Safe space",
-                    "desc": "This isn't just a venue — it's a safe zone built on respect, openness, and real connection. Everyone who steps in is part of the community, no matter their background, identity, or story."
+                    "img": "imgs/scene.jpg",
+                    "label": "Creative Scenography",
+                    "text": "Unique stage design is the foundation of every party. We work with the physical space itself, as well as lighting and projections. We embrace a DIY and re-use mentality, which gives us the freedom to create truly one-of-a-kind pieces. In our creations, we always strive to surprise you—whether through pure creativity or simply a good touch of humor."
                 },
                 {
-                    "label": "Community, connection",
-                    "desc": "It's not just about the beats — it's about the people. The collective builds a space where artists, organizers, and ravers connect, inspire, and support each other. Real vibes, real unity."
-                }
-            ]
-        },
-        "tickets": {
-            "label": "tickets",
-            "button": "buy",
-            "flip": "Flip the card to find out more.",
-            "tickets": [
-                {
-                    "label": "true_raver",
-                    "subheading": "FULL_FESTIVAL_PASS",
-                    "desc": "A full pass for all festival days — including the Friday afterparty",
-                    "texts": [
-                        {
-                            "label": "18_06 wednesday",
-                            "texts": [
-                                "local_djs",
-                                "ableton_workshop",
-                                "dj_workshop"
-                            ]
-                        },
-                        {
-                            "label": "19_06 thursday",
-                            "texts": [
-                                "live_sets",
-                                "synth_workshop"
-                            ]
-                        },
-                        {
-                            "label": "20_06 friday",
-                            "texts": [
-                                "open_air(17-22)"
-                            ],
-                            "afterpartyWarning": "Limited capacity"
-                        }
-                    ],
-                    "price": "500,-",
-                    "img": "001.jpg"
-                },
-                {
-                    "label": "raver",
-                    "subheading": "FRIDAY_OPEN_AIR",
-                    "desc": "Friday main stage ticket - both headliners, one massive night",
-                    "texts": [
-                        {
-                            "label": "20_06 friday",
-                            "texts": [
-                                "open_air(17-22)"
-                            ]
-                        }
-                    ],
-                    "price": "300,-",
-                    "img": "002.jpg"
-                },
-                {
-                    "label": "wormuper",
-                    "subheading": "WED/THU_for_education&community",
-                    "texts": [
-                        {
-                            "label": "18_06 wednesday",
-                            "texts": [
-                                "local_djs",
-                                "ableton_workshop",
-                                "dj_workshop"
-                            ]
-                        },
-                        {
-                            "label": "19_06 thursday",
-                            "texts": [
-                                "live_sets",
-                                "synth_workshop"
-                            ]
-                        }
-                    ],
-                    "price": "100-200,-",
-                    "img": "003.jpg"
+                    "img": "imgs/safety.jpg",
+                    "label": "safe space",
+                    "text": "Our goal is to make sure everyone feels safe at our events. We strictly condemn racism, homophobia, and any other forms of hate or violence. We always have trained staff on site who are ready to help with any situation. All of our events follow 'safe space' principles."
                 }
             ]
         }
